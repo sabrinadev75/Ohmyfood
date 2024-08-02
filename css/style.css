@@ -1,0 +1,73 @@
+/*style globale*/
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*début de la version mobile*/
+@media(max-width:767.98px){
+    /*STYLE LOGO*/
+    .logo {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+        position: fixed;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 1);
+        z-index: 5;
+    }
+    /*localisation*/
+    .location{
+        background-color:#EAEAEA;
+        padding: 5px;
+        color: #353535;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        position: absolute;
+        width: 100%;
+        top: 75px;
+        p{
+            text-align: center;
+            font-size: 1.3em;
+            font-family: "roboto", "sans-serif";
+            margin: 12px;
+        }
+    }
+   
+    /*logo de localisation*/
+    .fa-location-dot{
+        margin-right: 15px;
+    }
+
+    .title{
+        text-align: center;
+    }
+
+   .top{
+    background-color: rgba(246, 246, 246, 0.7);
+    padding-top: 150px;
+    padding-bottom: 50px;
+   }
+   h2{
+    width: 70%;
+    margin: auto;
+    font-weight: 900;
+   }
+   .select{
+    width: 90%;
+    margin: 20px auto;
+    font-size: 18px;
+    font-family: 'Roboto';
+    color: rgba(53, 53, 53, 1);
+    font-weight: 300;
+    line-height: 21.09px;
+   }
+   button{
+        padding: 15px;
+        background: linear-gradient(rgba(147, 86, 220, 1), rgba(255, 121, 218, 1));
+        border: none;
+        border-radius: 25px;
+        color: white;
+        width: 218px;
+   }
+}
