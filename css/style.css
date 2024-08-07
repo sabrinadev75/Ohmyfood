@@ -17,6 +17,7 @@ body{
         background-color: rgba(255, 255, 255, 1);
         z-index: 5;
     }
+
     /*localisation*/
     .location{
         background-color:#EAEAEA;
@@ -43,31 +44,114 @@ body{
         text-align: center;
     }
 
+
+    /*DÉBUT DE LA PARTIE HAUTE*/
    .top{
-    background-color: rgba(246, 246, 246, 0.7);
-    padding-top: 150px;
-    padding-bottom: 50px;
+        background-color: rgba(246, 246, 246, 0.7);
+        padding-top: 150px;
+        padding-bottom: 50px;
    }
+
    h2{
-    width: 70%;
-    margin: auto;
-    font-weight: 900;
+        width: 70%;
+        margin: auto;
+        font-weight: 900;
    }
+
    .select{
-    width: 90%;
-    margin: 20px auto;
-    font-size: 18px;
-    font-family: 'Roboto';
-    color: rgba(53, 53, 53, 1);
-    font-weight: 300;
-    line-height: 21.09px;
+        width: 90%;
+        margin: 20px auto;
+        font-size: 18px;
+        font-family: 'Roboto';
+        color: rgba(53, 53, 53, 1);
+        font-weight: 300;
+        line-height: 21.09px;
    }
-   button{
+
+   .top-btn{
         padding: 15px;
-        background: linear-gradient(rgba(147, 86, 220, 1), rgba(255, 121, 218, 1));
+        background: linear-gradient( rgba(255, 121, 218, 1),rgba(147, 86, 220, 1));
         border: none;
         border-radius: 25px;
         color: white;
         width: 218px;
    }
+
+   /*début de la partie fonctionnement*/
+   .fonctioning{
+        display: flex;
+        flex-direction: column;
+   }
+
+
+    /* bouton de la partie fonctionnement*/
+   .fonctioning-btn{
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15) ;
+        width: 322.49px;
+        height: 72.38px;
+        margin: 20px auto;
+        text-align: center;
+   }
+
+
+   /*texte des boutons de la partie fonctionnement */
+   .fonctioning-text{
+        margin-left: 20px;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: "Roboto";
+   }
+
+    .fa-mobile{
+        color: rgba(126, 126, 126, 1);
+        padding-left: 17px;
+        width: 16px;
+        height: 15.92px;
+        font-size: 20px;
+    }   
+
+    .fa-bars{
+       color: rgba(126, 126, 126, 1);
+       width: 16px;
+       height: 15.92px;
+       font-size: 20px;
+    }
+
+    .fa-shop{
+        color: rgba(147, 86, 220, 1);
+        width: 16px;
+        height: 15.92px;
+        font-size: 20px;
+    }
+
+    /*début de la partie card*/
+    .all-cards{
+        background-color: rgba(246, 246, 246, 0.7);
+    }
+    .card{
+        width: 340px;
+        height: 251px;
+        border-radius: 15px;
+        margin: auto;
+        background-color: rgba(255, 255, 255, 1);
+    }
+    .card-img{
+        width: 100%;
+        height: 160px;
+    }
+    .card-img img{
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+    }
+
+    /*Positionnement de l'icone coeur sur les cards*/
+    .fa-heart{
+        position: relative;
+        left: 286px;
+        bottom: 73px;
+        font-size: 25px;
+    }
 }
