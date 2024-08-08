@@ -53,7 +53,7 @@ body{
    }
 
    h2{
-        width: 70%;
+        width: 84%;
         margin: auto;
         font-weight: 900;
    }
@@ -78,9 +78,17 @@ body{
    }
 
    /*début de la partie fonctionnement*/
+    .title-fonctioning{
+        padding-bottom: 10px;
+        width: 340px;
+
+    }
+
+
    .fonctioning{
         display: flex;
         flex-direction: column;
+        padding: 45px 0;
    }
 
 
@@ -89,10 +97,10 @@ body{
         border: none;
         border-radius: 20px;
         box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15) ;
-        width: 322.49px;
+        width: 85%;
         height: 72.38px;
-        margin: 20px auto;
         text-align: center;
+        margin: 20px 0 20px 30px;
    }
 
 
@@ -127,31 +135,82 @@ body{
     }
 
     /*début de la partie card*/
+    .restaurant-title{
+        width: 340px;
+    }
+
     .all-cards{
         background-color: rgba(246, 246, 246, 0.7);
+        padding-top: 44px;
     }
     .card{
         width: 340px;
-        height: 251px;
+        height: 270px;
         border-radius: 15px;
-        margin: auto;
+        margin: 25px auto;
         background-color: rgba(255, 255, 255, 1);
     }
     .card-img{
         width: 100%;
-        height: 160px;
+        height: 200px;
     }
     .card-img img{
         width: 100%;
         height: 100%;
-        border-radius: 15px;
+        border-radius: 15px 15px 0 0;
+        object-fit: cover;
+    }
+
+    .card-text h3{
+        line-height: 0;
+        margin-bottom: 28px;
+        font-size: 18px;
+        font-weight: 700;
+        font-family: 'Roboto';
+    }
+
+    .card-text p{
+        line-height: 0;
+        font-size: 17px;
+        font-weight: 300;
+        font-family: 'Roboto';
+        
     }
 
     /*Positionnement de l'icone coeur sur les cards*/
     .fa-heart{
         position: relative;
-        left: 286px;
-        bottom: 73px;
+        left: 80%;
+        bottom: 37px;
         font-size: 25px;
     }
+    /*début de la section footer*/
+    .footer{
+        background-color: rgba(53, 53, 53, 1);
+        color: white;
+        padding: 10px 20px;
+    }
+
+    .logo2{
+        font-family: "Shrikhand";
+        font-weight: 900;
+        font-style: italic;
+        color: rgba(255, 255, 255, 1);
+        font-size: 20px;
+    }
+
+    .space{
+        margin-left: 10px;
+    }
+
+    /*icon footer*/
+    .fa-utensils{
+        color: white;
+        width: 20px;
+    }
+    .fa-handshake{
+        color: white;
+        width: 20px;
+    }
+    
 }

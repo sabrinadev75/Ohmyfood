@@ -1,0 +1,45 @@
+/*style globale*/
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*début de la version mobile*/
+@media(max-width:767.98px){
+/*Début du header*/
+/*STYLE LOGO*/
+.logo {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 5;
+}
+
+.fa-arrow-left{
+    position: absolute;
+    top: 30px;
+    z-index: 11;
+    left: 26px;
+    font-size: 20px;
+}
+
+.palette-du-gout-img {
+    padding-top:70px ;
+
+}
+
+.palette-du-gout-img img{
+width: 100%;
+height: 275px;
+}
+
+
+
+
+
+
+}
