@@ -1,3 +1,4 @@
+
 /*style globale*/
 body{
     margin: 0;
@@ -117,9 +118,12 @@ body{
         font-weight: 700;
     }
 
+    .body-restaurant{
+        background-color: rgba(246, 246, 246, 0.7);
+    }
+
 
     .all-cards{
-        background-color: rgba(246, 246, 246, 0.7);
         padding: 45px 0;
         width: 90%;
         margin: auto;
@@ -142,6 +146,7 @@ body{
         object-fit: cover;
     }
 
+
     .card-text h3{
         line-height: 0;
         margin-bottom: 28px;
@@ -149,6 +154,12 @@ body{
         font-weight: 700;
         font-family: 'Roboto';
     }
+
+
+    .card-text{
+        padding: 10px;
+    }
+
 
     .card-text p{
         line-height: 0;
@@ -158,11 +169,21 @@ body{
         
     }
 
+    /*checkbox du coeur */  
+    #box-heart-1{
+        display: none;
+    }
+
+    #box-heart-1:checked + .heart-color1 #heart-1{
+        background-color:linear-gradient( rgba(255, 121, 218, 1),rgba(147, 86, 220, 1));;
+    }
+
+
     /*Positionnement de l'icone coeur sur les cards*/
     .fa-heart{
         position: relative;
-        left: 80%;
-        bottom: 37px;
+        left: 86%;
+        bottom: 50px;
         font-size: 25px;
     }
     /*début de la section footer*/
@@ -170,6 +191,8 @@ body{
         background-color: rgba(53, 53, 53, 1);
         color: white;
         padding: 10px 20px;
+        font-family: 'Roboto';
+        font-size: 16px;
     }
 
     .logo2{
@@ -182,6 +205,11 @@ body{
 
     .space{
         margin-left: 10px;
+        font-weight: 500;
+    }
+
+    .footer-text{
+        font-weight: 400;
     }
 
     /*icon footer*/
@@ -193,5 +221,110 @@ body{
         color: white;
         width: 20px;
     }
+
+
    
+}
+
+/*Début de la partie destkop*/
+@media(min-width:1024px){
+
+/*début de hedear*/
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        padding: 27px 0;
+        position:absolute;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 1);
+        z-index: 5;
+        top: 0;
+    }
+    /*début de la section location*/
+
+    .location{
+        background-color:#EAEAEA;
+        padding: 5px;
+        color: #353535;
+        position: absolute;
+        top: 86px;
+        left: 0;
+        right: 0;
+        p{
+            text-align: center;
+            font-size: 16px;
+            font-family: "roboto", "sans-serif";
+            margin: 12px;
+            font-weight: 400;
+            padding-right: 8px;
+        }
+    }
+
+    .fa-location-dot{
+        margin-right: 12px;
+    }
+
+
+      /*DÉBUT DE LA PARTIE HAUTE*/
+    .top{
+        background-color: rgba(246, 246, 246, 0.7);
+        padding-top: 150px;
+        padding-bottom: 50px;
+    }
+
+    .title-top{
+        margin: auto;
+        font-weight: 700;
+        font-size: 40px;
+        font-family: 'Roboto';
+    }
+
+    .title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 15px;
+
+    }   
+
+    .select{
+        margin: 20px auto;
+        font-size: 18px;
+        font-family: 'Roboto';
+        color: rgba(53, 53, 53, 1);
+        font-weight: 300;
+        line-height: 21.09px;
+   }
+
+   /*bouton du haut*/
+   .top-btn{
+        padding: 15px;
+        background: linear-gradient( rgba(255, 121, 218, 1),rgba(147, 86, 220, 1));
+        border: none;
+        border-radius: 25px;
+        color: white;
+        width: 218px;
+        height: 50px;
+        margin-top: 15px;
+        font-size: 16px;
+        font-family: 'Roboto';
+   }
+   /*Début de la partie fonctioning*/
+   .title-fonctioning{
+    padding-bottom: 10px;
+    
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Roboto';
+}
+
+.title-fonctioning img{
+    width: 30%;
+}
+
+.fonctioning{
+    width:85%;
+    margin: auto;
+}
 }
