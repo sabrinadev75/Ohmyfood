@@ -1,12 +1,24 @@
-
 /*style globale*/
-body{
+body {
     margin: 0;
     padding: 0;
 }
 
+li{
+    list-style: none;
+}
+
+.footer-link{
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    font-family: 'Roboto';
+}
+
+
+
 /*début de la version mobile*/
-@media(max-width:767.98px){
+@media(max-width:767.98px) {
+
     /*STYLE LOGO*/
     .logo {
         display: flex;
@@ -19,13 +31,13 @@ body{
         z-index: 5;
     }
 
-    .logo img{
+    .logo img {
         width: 170px;
     }
 
     /*localisation*/
-    .location{
-        background-color:#EAEAEA;
+    .location {
+        background-color: #EAEAEA;
         padding: 5px;
         color: #353535;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -33,22 +45,23 @@ body{
         top: 70px;
         left: 0;
         right: 0;
-        p{
-            text-align: center;
-            font-size: 16px;
-            font-family: "roboto", "sans-serif";
-            margin: 12px;
-            font-weight: 400;
-            padding-right: 8px;
-        }
     }
-   
+
+    .location p{
+        text-align: center;
+        font-size: 16px;
+        font-family: "roboto", "sans-serif";
+        margin: 12px;
+        font-weight: 400;
+        padding-right: 8px;
+    }
+
     /*logo de localisation*/
-    .fa-location-dot{
+    .fa-location-dot {
         margin-right: 15px;
     }
 
-    .title{
+    .title {
         text-align: center;
         margin-top: 20px;
         padding-bottom: 20px;
@@ -56,21 +69,21 @@ body{
 
 
     /*DÉBUT DE LA PARTIE HAUTE*/
-   .top{
+    .top {
         background-color: rgba(246, 246, 246, 0.7);
         padding-top: 150px;
         padding-bottom: 50px;
-   }
+    }
 
-   .title-top{
+    .title-top {
         width: 67%;
         margin: auto;
         font-weight: 700;
         font-size: 24px;
         font-family: 'Roboto';
-   }
+    }
 
-   .select{
+    .select {
         width: 90%;
         margin: 20px auto;
         font-size: 18px;
@@ -78,21 +91,21 @@ body{
         color: rgba(53, 53, 53, 1);
         font-weight: 300;
         line-height: 21.09px;
-   }
+    }
 
-   .top-btn{
+    .top-btn {
         padding: 15px;
-        background: linear-gradient( rgba(255, 121, 218, 1),rgba(147, 86, 220, 1));
+        background: linear-gradient(rgba(255, 121, 218, 1), rgba(147, 86, 220, 1));
         border: none;
         border-radius: 25px;
         color: white;
         width: 218px;
         height: 50px;
         margin-top: 15px;
-   }
+    }
 
-   /*début de la partie fonctionnement*/
-    .title-fonctioning{
+    /*début de la partie fonctionnement*/
+    .title-fonctioning {
         padding-bottom: 10px;
         width: 340px;
         font-size: 24px;
@@ -100,54 +113,79 @@ body{
         font-family: 'Roboto';
     }
 
-
-
-   .fonctioning{
+    .fonctioning {
         display: flex;
         flex-direction: column;
         padding: 45px 0;
-        width: 88%;
+        width: 90%;
         margin: auto;
-   }
+        background-color: #FFF;
+    }
+
+    /* bouton de la partie fonctionnement*/
+    .fonctioning-btn {
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+        width: 96%;
+        /* width: 322.49px; */
+        /* height: 72.38px; */
+        text-align: center;
+        /* margin: 30px 11px; */
+        margin: 20px 0 20px 16px;
+        padding: 25px 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        
+    }
+    /* le test du bouton fonctionnement */
+    .fonctioning-text{
+        font-weight: 500;
+        font-size: 16px;
+        font-family: 'Roboto';
+    }
+
+    /* le cercle avec le numero */
+    .circle{
+        position: absolute;
+        left: 20px;
+        padding: 4px 8px;
+        background-color: rgba(147, 86, 220, 1);
+        color: rgba(255, 255, 255, 1);
+        border-radius: 50%;
+    }
 
     /*début de la partie card*/
-    .restaurant-title{
+    .restaurant-title {
         width: 340px;
         font-family: 'Roboto';
         font-size: 24px;
         font-weight: 700;
     }
 
-    .body-restaurant{
+
+    .all-cards {
         background-color: rgba(246, 246, 246, 0.7);
-    }
-
-
-    .all-cards{
         padding: 45px 0;
         width: 90%;
         margin: auto;
     }
-    .card{
+
+    .card {
         width: 100%;
-        height: 270px;
+        height: 251px;
         border-radius: 15px;
         margin: 24px auto;
         background-color: rgba(255, 255, 255, 1);
     }
-    .card-img{
+
+    .card-img {
         width: 100%;
-        height: 180px;
-    }
-    .card-img img{
-        width: 100%;
-        height: 100%;
-        border-radius: 15px 15px 0 0;
-        object-fit: cover;
+        height: 170px;
     }
 
-
-    .card-text h3{
+    .card-text h3 {
         line-height: 0;
         margin-bottom: 28px;
         font-size: 18px;
@@ -155,47 +193,30 @@ body{
         font-family: 'Roboto';
     }
 
-
-    .card-text{
-        padding: 10px;
-    }
-
-
-    .card-text p{
+    .card-text p {
         line-height: 0;
         font-size: 17px;
         font-weight: 300;
         font-family: 'Roboto';
-        
-    }
 
-    /*checkbox du coeur */  
-    #box-heart-1{
-        display: none;
     }
-
-    #box-heart-1:checked + .heart-color1 #heart-1{
-        background-color:linear-gradient( rgba(255, 121, 218, 1),rgba(147, 86, 220, 1));;
-    }
-
 
     /*Positionnement de l'icone coeur sur les cards*/
-    .fa-heart{
+    .fa-heart {
         position: relative;
-        left: 86%;
-        bottom: 50px;
+        left: 82%;
+        bottom: 43px;
         font-size: 25px;
     }
+
     /*début de la section footer*/
-    .footer{
+    .footer {
         background-color: rgba(53, 53, 53, 1);
         color: white;
         padding: 10px 20px;
-        font-family: 'Roboto';
-        font-size: 16px;
     }
 
-    .logo2{
+    .logo2 {
         font-family: "Shrikhand";
         font-weight: 900;
         font-style: italic;
@@ -203,128 +224,491 @@ body{
         font-size: 20px;
     }
 
-    .space{
+    .space {
         margin-left: 10px;
-        font-weight: 500;
     }
 
-    .footer-text{
-        font-weight: 400;
+    .resto{
+        background-color: rgba(246, 246, 246, 0.7);
     }
 
     /*icon footer*/
-    .fa-utensils{
-        color: white;
-        width: 20px;
-    }
-    .fa-handshake{
+    .fa-utensils {
         color: white;
         width: 20px;
     }
 
+    .fa-handshake {
+        color: white;
+        width: 20px;
+    }
 
-   
+    #card1 {
+        background-image: url('../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+        border-radius: 15px 15px 0 0;
+    }
+
+    #card2 {
+        background-image: url('../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');
+        background-repeat: no-repeat;
+        background-position: 0px -145px;
+        background-size: cover;
+        border-radius: 15px 15px 0 0;
+    }
+
+    #card3 {
+        background-image: url('../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+        border-radius: 15px 15px 0 0;
+    }
+
+    #card4 {
+        background-image: url('../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .card-text {
+        padding: 5px 10px;
+    }
+
+    /* Gestion des bouton likes  */
+    .test1 {
+        position: relative;
+        bottom: 50px;
+        left: 86%;
+    }
+
+    .test1:hover {
+        cursor: pointer;
+    }
+
+    .like {
+        display: none;
+    }
+
+    #resto-1 {
+        display: none;
+    }
+
+    #resto-2 {
+        display: none;
+    }
+
+    #resto-3 {
+        display: none;
+    }
+
+    #resto-4 {
+        display: none;
+    }
+
+    #resto-1:checked+.test1 .dislike {
+        display: none;
+    }
+
+    #resto-1:checked+.test1 .like {
+        display: inline;
+    }
+
+    #resto-2:checked+.test1 .dislike {
+        display: none;
+    }
+
+    #resto-2:checked+.test1 .like {
+        display: inline;
+    }
+
+    #resto-3:checked+.test1 .dislike {
+        display: none;
+    }
+
+    #resto-3:checked+.test1 .like {
+        display: inline;
+    }
+
+    #resto-4:checked+.test1 .dislike {
+        display: none;
+    }
+
+    #resto-4:checked+.test1 .like {
+        display: inline;
+    }
 }
 
-/*Début de la partie destkop*/
-@media(min-width:1024px){
-
-/*début de hedear*/
-
-    .logo {
+/* #################################################################### */
+/* partie desktop */
+@media (min-width: 768px) {
+     /*STYLE LOGO*/
+     .logo {
         display: flex;
         justify-content: center;
-        padding: 27px 0;
-        position:absolute;
+        padding: 20px 0;
+        /* box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15); */
+        position: fixed;
         width: 100%;
         background-color: rgba(255, 255, 255, 1);
         z-index: 5;
-        top: 0;
     }
-    /*début de la section location*/
 
-    .location{
-        background-color:#EAEAEA;
+    .logo img {
+        width: 170px;
+    }
+
+    /*localisation*/
+    .location {
+        background-color: #EAEAEA;
         padding: 5px;
         color: #353535;
+        /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
         position: absolute;
-        top: 86px;
+        top: 70px;
         left: 0;
         right: 0;
-        p{
-            text-align: center;
-            font-size: 16px;
-            font-family: "roboto", "sans-serif";
-            margin: 12px;
-            font-weight: 400;
-            padding-right: 8px;
-        }
     }
 
-    .fa-location-dot{
-        margin-right: 12px;
+    .location p {
+        text-align: center;
+        font-size: 16px;
+        font-family: "roboto", "sans-serif";
+        margin: 12px;
+        font-weight: 400;
+        padding-right: 8px;
+    }
+
+    /*logo de localisation*/
+    .fa-location-dot {
+        margin-right: 15px;
+    }
+
+    .title {
+        text-align: center;
+        margin-top: 20px;
+        padding-bottom: 20px;
     }
 
 
-      /*DÉBUT DE LA PARTIE HAUTE*/
-    .top{
+    /*DÉBUT DE LA PARTIE HAUTE*/
+    .top {
         background-color: rgba(246, 246, 246, 0.7);
         padding-top: 150px;
         padding-bottom: 50px;
     }
 
-    .title-top{
+    .title-top {
+        width: 67%;
         margin: auto;
         font-weight: 700;
-        font-size: 40px;
+        font-size: 24px;
         font-family: 'Roboto';
     }
 
-    .title{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 15px;
-
-    }   
-
-    .select{
+    .select {
+        width: 90%;
         margin: 20px auto;
         font-size: 18px;
         font-family: 'Roboto';
         color: rgba(53, 53, 53, 1);
         font-weight: 300;
         line-height: 21.09px;
-   }
+    }
 
-   /*bouton du haut*/
-   .top-btn{
+    .top-btn {
         padding: 15px;
-        background: linear-gradient( rgba(255, 121, 218, 1),rgba(147, 86, 220, 1));
+        background: linear-gradient(rgba(255, 121, 218, 1), rgba(147, 86, 220, 1));
         border: none;
         border-radius: 25px;
         color: white;
         width: 218px;
         height: 50px;
         margin-top: 15px;
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    /*début de la partie fonctionnement*/
+    .title-fonctioning {
+        padding-bottom: 10px;
+        width: 100%;
+        font-size: 24px;
+        font-weight: 700;
+        font-family: 'Roboto';
+    }
+
+    .fonctioning {
+        display: flex;
+        flex-direction: column;
+        padding: 45px 0;
+        width: 90%;
+        max-width: 1050px;
+        margin: auto;
+        background-color: #FFF;
+    }
+
+    .fonctionning-button{
+        display: flex;
+    }
+
+    /* bouton de la partie fonctionnement*/
+    .fonctioning-btn {
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+        width: 322.49px;
+        /* width: 50%; */
+        text-align: center;
+        margin-right: 40px;
+        margin-left: 10px;
+        /* padding: 25px 0; */
+        padding: 20px 58px 20px 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-weight: 500;
+        font-family: 'Roboto';
+    }
+    /* le test du bouton fonctionnement */
+    .fonctioning-text{
+        font-weight: 500;
         font-size: 16px;
         font-family: 'Roboto';
-   }
-   /*Début de la partie fonctioning*/
-   .title-fonctioning{
-    padding-bottom: 10px;
-    
-    font-size: 24px;
-    font-weight: 700;
-    font-family: 'Roboto';
-}
+        margin-left: 20px;
+    }
 
-.title-fonctioning img{
-    width: 30%;
-}
+    /* le cercle avec le numero */
+    .circle{
+        position: relative;
+        left: -15px;
+        padding: 4px 8px;
+        background-color: rgba(147, 86, 220, 1);
+        color: rgba(255, 255, 255, 1);
+        border-radius: 50%;
+    }
 
-.fonctioning{
-    width:85%;
-    margin: auto;
-}
+    /*début de la partie card*/
+    .restaurant-title {
+        width: 340px;
+        font-family: 'Roboto';
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+
+    .all-cards {
+        /* background-color: rgba(246, 246, 246, 0.7); */
+        padding: 45px 0;
+        width: 100%;
+        margin: auto;
+    }
+
+    .cards-bloc{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 45%;
+        height: 251px;
+        /* height: 300px; */
+        border-radius: 15px;
+        /* margin: 24px 110px 24px 0; */
+        margin: 24px 0;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    .card-img {
+        width: 100%;
+        height: 170px;
+        /* height: 225px; */
+    }
+
+    .card-text h3 {
+        line-height: 0;
+        margin-bottom: 28px;
+        font-size: 18px;
+        font-weight: 700;
+        font-family: 'Roboto';
+    }
+
+    .card-text p {
+        line-height: 0;
+        font-size: 17px;
+        font-weight: 300;
+        font-family: 'Roboto';
+
+    }
+
+    /*Positionnement de l'icone coeur sur les cards*/
+    .fa-heart {
+        position: relative;
+        left: 82%;
+        bottom: 43px;
+        font-size: 25px;
+    }
+
+    /*début de la section footer*/
+    .footer {
+        background-color: rgba(53, 53, 53, 1);
+        color: white;
+        padding: 10px 20px;
+    }
+
+    .logo2 {
+        font-family: "Shrikhand";
+        font-weight: 900;
+        font-style: italic;
+        color: rgba(255, 255, 255, 1);
+        font-size: 20px;
+    }
+
+    .space {
+        margin-left: 10px;
+    }
+
+    .resto{
+        max-width: 1080px;
+        margin: auto;
+        width: 90%;
+    }
+
+    /*icon footer*/
+    .fa-utensils {
+        color: white;
+        width: 20px;
+    }
+
+    .fa-handshake {
+        color: white;
+        width: 20px;
+    }
+
+    #card1 {
+        background-image: url('../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+        background-repeat: no-repeat;
+        /* background-position: bottom; */
+        background-position: 0px -107px;
+        /* background-position: 0px 55%; */
+        background-size: cover;
+        border-radius: 15px 15px 0 0;
+    }
+
+    #card2 {
+        background-image: url('../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');
+        background-repeat: no-repeat;
+        background-position: 0px -244px;
+        /* background-position: 0px 50%; */
+        background-size: cover;
+        border-radius: 15px 15px 0 0;
+    }
+
+    #card3 {
+        background-image: url('../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
+        background-repeat: no-repeat;
+        /* background-position: bottom; */
+        background-position: 0px -103px;
+        /* background-position: 0px 55%; */
+        background-size: cover;
+        border-radius: 15px 15px 0 0;
+    }
+
+    #card4 {
+        background-image: url('../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
+        background-repeat: no-repeat;
+        /* background-position: bottom; */
+        background-position: 0px -110px;
+        /* background-position: 0px 55%; */
+        background-size: cover;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .card-text {
+        padding: 5px 10px;
+    }
+
+    /* Gestion des bouton likes  */
+    .test1 {
+        position: relative;
+        bottom: 50px;
+        /* left: 614px; */
+        left: 88%;
+    }
+
+    .test1:hover {
+        cursor: pointer;
+    }
+
+    .like {
+        display: none;
+    }
+
+    #resto-1 {
+        display: none;
+    }
+
+    #resto-2 {
+        display: none;
+    }
+
+    #resto-3 {
+        display: none;
+    }
+
+    #resto-4 {
+        display: none;
+    }
+
+    #resto-1:checked+.test1 .dislike {
+        display: none;
+    }
+
+    #resto-1:checked+.test1 .like {
+        display: inline;
+    }
+
+    #resto-2:checked+.test1 .dislike {
+        display: none;
+    }
+
+    #resto-2:checked+.test1 .like {
+        display: inline;
+    }
+
+    #resto-3:checked+.test1 .dislike {
+        display: none;
+    }
+
+    #resto-3:checked+.test1 .like {
+        display: inline;
+    }
+
+    #resto-4:checked+.test1 .dislike {
+        display: none;
+    }
+
+    #resto-4:checked+.test1 .like {
+        display: inline;
+    }
+
+    .footer{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    ul{
+        display: flex;
+    }
+
+    li{
+        padding: 0 15px;
+    }
 }

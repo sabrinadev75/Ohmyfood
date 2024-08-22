@@ -1,15 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!--début du header-->
     <header>
@@ -35,95 +42,139 @@
     <div class="fonctioning">
         <h2 class="title-fonctioning">Fonctionnement</h2>
         
-           <img src="./images/icon/boutton1.svg" alt="bouton1">
-           <img src="./images/icon/bonton2.svg" alt="bouton2">
-           <img src="./images/icon/bouton3.svg" alt="bouton3">
-        
+        <div class="fonctionning-button">
+            <!-- <img src="./images/icon/boutton1.svg" alt="bouton1">
+            <img src="./images/icon/bonton2.svg" alt="bouton2">
+            <img src="./images/icon/bouton3.svg" alt="bouton3"> -->
+            <button class="fonctioning-btn">
+                <span class="circle">1</span>
+                <img src="./images/icon/mobile-screen-button.svg" alt="phone">
+                <span class="fonctioning-text">Choisissez un restaurant</span>
+            </button>
+            <button class="fonctioning-btn">
+                <span class="circle">2</span>
+                <img src="./images/icon/list-ul.svg" alt="liste"> 
+                <span class="fonctioning-text">Composez votre menu</span>
+            </button>
+            <button class="fonctioning-btn">
+                <span class="circle">3</span>
+                <img src="./images/icon/store.svg" alt="store">
+                <span class="fonctioning-text">Dégustez au restaurant</span>
+            </button>
+        </div>
     </div>
     <!--Fin de la partie fonctionnement-->
 
 
     <!--Début de la partie card-->
-    <div class="body-restaurant">
+    <div class="resto">
         <div class="all-cards">
 
-        
             <div class="restaurant">
                 <h2 class="restaurant-title">Restaurants</h2>
             </div>
 
-            <div>
+            <!-- bloc qui contient toutes les cards -->
+            <div class="cards-bloc">
                 <div class="card">
-                    <div class="card-img">
-                        <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+                    <div class="card-img" id="card1">
+                        <!-- <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"> -->
                     </div>
                     <div class="card-text">
                         <h3>La palette du goût</h3>
                         <p>Ménilmontant</p>
-                        <input type="checkbox" id="box-heart-1">
-                        <label for="box-heart-1" class="heart-color1"> <i class="fa-regular fa-heart" id="heart-1"></i></label>
-                        
+                        <input type="checkbox" id="resto-1">
+                        <label for="resto-1" class="test1">
+                            <img src="./images/icon/disLike.svg" class="dislike" alt="Dislike image">
+                            <img src="./images/icon/Like.svg" class="like" alt="like image">
+                        </label>
                     </div>
                 </div>
 
 
                 <div class="card">
-                    <div class="card-img">
-                        <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg">
+                    <div class="card-img" id="card2">
+                        <!-- <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"> -->
                     </div>
                     <div class="card-text">
                         <h3>La la note enchantée</h3>
                         <p>Charonne</p>
-                        <i class="fa-regular fa-heart" id="heart-2"></i>
+                        <input type="checkbox" id="resto-2">
+                        <label for="resto-2" class="test1">
+                            <img src="./images/icon/disLike.svg" class="dislike" alt="Dislike image">
+                            <img src="./images/icon/Like.svg" class="like" alt="like image">
+                        </label>
                     </div>
                 </div>
 
-
                 <div class="card">
-                    <div class="card-img">
-                        <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg">
+                    <div class="card-img" id="card3">
+                        <!-- <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"> -->
                     </div>
                     <div class="card-text">
                         <h3>À la française</h3>
                         <p>Cité rouge</p>
-                        <i class="fa-regular fa-heart" id="heart-3"></i>
+                        <input type="checkbox" id="resto-3">
+                        <label for="resto-3" class="test1">
+                            <img src="./images/icon/disLike.svg" class="dislike" alt="Dislike image">
+                            <img src="./images/icon/Like.svg" class="like" alt="like image">
+                        </label>
                     </div>
                 </div>
 
-
-
                 <div class="card">
-                    <div class="card-img">
-                        <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg">
+                    <div class="card-img" id="card4">
+                        <!-- <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"> -->
                     </div>
                     <div class="card-text">
                         <h3>Le délice des sens</h3>
                         <p>Folie Méricourt</p>
-                        <i class="fa-regular fa-heart" id="heart-4"></i>
+                        <input type="checkbox" id="resto-4">
+                        <label for="resto-4" class="test1">
+                            <img src="./images/icon/disLike.svg" class="dislike" alt="Dislike image">
+                            <img src="./images/icon/Like.svg" class="like" alt="like image">
+                        </label>
                     </div>
                 </div>
             </div>
-        
+
         </div>
     </div>
 
     <!--Début de la section footer-->
-<footer>
-    <div class="footer">
+    <footer>
+        <div class="footer">
 
-        <div>
-            <p class="logo2">ohmyfood</p>
-        </div>
-        <div>
-            <p><i class="fa-solid fa-utensils"></i> <span class="space">Proposer un restaurant</span></p>
-            <p><i class="fa-regular fa-handshake"></i><span class="space"> Devenir partenaire</span></p>
-            <p class="footer-text">Mention légales</p>
-            <p class="footer-text">Contact</p>
-        
-        </div>
-    </div>
+            <div>
+                <h2 class="logo2">ohmyfood</h2>
+            </div>
+            <div>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-utensils"></i>
+                        <a href="#" class="footer-link">Proposer un restaurant</a>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-handshake"></i>
+                        <a href="#" class="footer-link">Devenir partenaire</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Mention légales</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Contact</a>
+                    </li>
+                </ul>
+                <!-- <p><i class="fa-solid fa-utensils"></i> <span class="space">Proposer un restaurant</span></p>
+                <p><i class="fa-regular fa-handshake"></i><span class="space"> Devenir partenaire</span></p>
+                <p>Mention légales</p>
+                <p>Contact</p> -->
 
-</footer>
+            </div>
+        </div>
+
+    </footer>
 
 </body>
+
 </html>
