@@ -33,12 +33,34 @@ body{
 }
 
 .palette-du-gout-img img{
-width: 100%;
-height: 275px;
+    width: 100%;
+    height: 275px;
+}
+
+/*block qui contient le Menu*/
+.block-conteneur{
+    background-color: rgba(246, 246, 246, 1);
+    position: absolute;
+    top: 300px;
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.title-conteneur{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 
-
+/*H2 style nom du restaurant*/
+.name-restaurant{
+    font-family: "Shrikhand";
+    font-style: italic;
+    font-weight: 900;
+    font-size: 28px;
+    color: rgba(16, 16, 16, 1);
+}
 
 
 

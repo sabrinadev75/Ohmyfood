@@ -14,12 +14,62 @@ li{
     font-family: 'Roboto';
     
 }
+/*loader (chargement de la page)*/
+.loader-block{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 14;
+    align-items: center;
+    justify-content: center;
+    animation: fadeOut 3s forwards;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 3px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after {
+    content: '';  
+    position: absolute;
+    box-sizing: border-box;
+    left: 20px;
+    top: 31px;
+    border: 10px solid transparent;
+    border-right-color: #FFF;
+    transform: rotate(-40deg);
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+  @keyframes fadeOut{
+   to {
+    opacity: 0;
+    visibility: hidden;
+    }
+  }
 
 
 
 /*début de la version mobile*/
 @media(max-width:767.98px) {
-
     /*STYLE LOGO*/
     .logo {
         display: flex;
@@ -185,6 +235,19 @@ li{
         width: 100%;
         height: 170px;
     }
+    /*block nouveau sur les cards*/
+    .news{
+        font-weight: 500;
+        position: relative;
+        left: 73%;
+        top: 16px;
+        color: rgba(0, 135, 102, 1);
+        background-color: rgba(153, 226, 208, 1);
+        padding: 6px 10px;
+        font-family: 'Roboto';
+        font-size: 14px;
+        border-radius: 2px;
+    }
 
     .card-text h3 {
         line-height: 0;
@@ -203,11 +266,12 @@ li{
     }
 
     /*Positionnement de l'icone coeur sur les cards*/
-    .fa-heart {
-        position: relative;
-        left: 82%;
-        bottom: 43px;
-        font-size: 25px;
+    .dislike{
+        display: inline;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 21px;
     }
 
     /*début de la section footer*/
@@ -324,6 +388,10 @@ li{
 
     #resto-1:checked+.test1 .like {
         display: inline;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 21px;
     }
 
     #resto-2:checked+.test1 .dislike {
@@ -332,6 +400,10 @@ li{
 
     #resto-2:checked+.test1 .like {
         display: inline;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 21px;
     }
 
     #resto-3:checked+.test1 .dislike {
@@ -340,6 +412,10 @@ li{
 
     #resto-3:checked+.test1 .like {
         display: inline;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 21px;
     }
 
     #resto-4:checked+.test1 .dislike {
@@ -348,6 +424,10 @@ li{
 
     #resto-4:checked+.test1 .like {
         display: inline;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 21px;
     }
 }
 
@@ -538,6 +618,19 @@ li{
         height: 170px;
         /* height: 225px; */
     }
+    /*block nouveau sur les cards*/
+    .news{
+        font-weight: 500;
+        position: relative;
+        left: 347px;
+        top: 16px;
+        color: rgba(0, 135, 102, 1);
+        background-color: rgba(153, 226, 208, 1);
+        padding: 6px 10px;
+        font-family: 'Roboto';
+        font-size: 14px;
+        border-radius: 2px;
+    }
 
     .card-text h3 {
         line-height: 0;
@@ -557,10 +650,7 @@ li{
 
     /*Positionnement de l'icone coeur sur les cards*/
     .fa-heart {
-       /* position: relative;
-        left: 82%;
-        bottom: 43px;
-        font-size: 25px;*/
+        font-size: 25px;
     }
 
     /*début de la section footer*/
@@ -660,9 +750,8 @@ li{
     /* Gestion des bouton likes  */
     .test1 {
         position: relative;
-        bottom: 50px;
-        /* left: 614px; */
-        left: 88%;
+        bottom: 44px;
+        left: 91%;
     }
 
     .test1:hover {
@@ -695,6 +784,7 @@ li{
 
     #resto-1:checked+.test1 .like {
         display: inline;
+        width: 25px;
     }
 
     #resto-2:checked+.test1 .dislike {
@@ -703,6 +793,7 @@ li{
 
     #resto-2:checked+.test1 .like {
         display: inline;
+        width: 25px;
     }
 
     #resto-3:checked+.test1 .dislike {
@@ -711,6 +802,7 @@ li{
 
     #resto-3:checked+.test1 .like {
         display: inline;
+        width: 25px;
     }
 
     #resto-4:checked+.test1 .dislike {
@@ -719,6 +811,7 @@ li{
 
     #resto-4:checked+.test1 .like {
         display: inline;
+        width: 25px;
     }
 
     .footer{
