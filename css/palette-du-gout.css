@@ -45,6 +45,7 @@ body{
     width: 100%;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    padding-left: 11px;
 }
 .title-conteneur{
     display: flex;
@@ -60,8 +61,163 @@ body{
     font-weight: 900;
     font-size: 28px;
     color: rgba(16, 16, 16, 1);
+    margin-left: -25px;
+    margin-right: -27px;
+}
+
+/*Icone coeur*/
+.dislike{
+    display: inline;
+    position: absolute;
+    top: 34px;
+    right: 41px;
+
 }
 
 
+.like{
+display: none;
+
+}
+
+
+.test1:hover {
+    cursor: pointer;
+}
+
+
+/*menu*/
+.menu{
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 15px;
+    height: 69px;
+    width: 349px;
+}
+
+.title-menu{
+    font-weight: normal;
+    font-family: Roboto;
+    border-bottom: 3px solid rgba(153, 226, 208, 1);
+    width: 11%;
+    padding-bottom: 5px;
+}
+.title-h3{
+    padding-left: 15px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+}
+
+.menu-p{
+    padding-left: 15px; 
+    margin-top: 4px;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: 'Roboto';
+    font-size: 15px;
+}
+
+/*Prix des entrées*/
+.prix1{
+    display: inline;
+    position: absolute;
+    right: 40px;
+    top:195px;
+}
+
+.prix2{
+    display: inline;
+    position: absolute;
+    right: 40px;
+    top: 282px;
+}
+
+
+.prix3{
+    display: inline;
+    position: absolute;
+    right: 40px;
+    top: 368px;
+}
+
+/*Prix des plats*/
+.prix4{
+    display: inline;
+    position: absolute;
+    right: 40px;
+    top: 508px;
+}
+
+.prix5{
+    display: inline;
+    position: absolute;
+    right: 40px;
+    bottom: 436px;
+}
+
+.prix6{
+    display: inline;
+    position: absolute;
+    right: 40px;
+    bottom: 348px;
+}
+
+/*Prix des desserts*/
+.prix7{
+    isplay: inline;
+    position: absolute;
+    right: 40px;
+    bottom: 210px;
+}
+
+.prix8{
+    display: inline;
+    position: absolute;
+    right: 40px;
+    bottom: 122px;
+}
+
+.prix9{
+    display: inline;
+    position: absolute;
+    right: 40px;
+    bottom: 36px;
+}
+
+
+/*Bouton commander*/
+.btn-commander{
+    /*padding: 15px;
+    background: linear-gradient(rgba(255, 121, 218, 1), rgba(147, 86, 220, 1));
+    border: none;
+    border-radius: 25px;
+    color: white;
+    width: 218px;
+    height: 50px;
+    margin-top: 15px;*/
+}
+
+
+/*footer*/
+.footer{
+    display: inline;
+    position: absolute;
+    top: 95em;
+    background-color: rgba(53, 53, 53, 1);
+    color: white;
+    width: 100%;
+    padding-left: 11px;
+    font-family: "Roboto";
+}
+
+.footer-link{
+    text-decoration: none;
+    color: white;
+    
+
+}
+.link-footer{
+    list-style: none;
+    padding: 0;
+
+}
 
 }

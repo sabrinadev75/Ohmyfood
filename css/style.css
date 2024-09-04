@@ -69,7 +69,7 @@ li{
 
 
 /*début de la version mobile*/
-@media(max-width:767.98px) {
+ 
     /*STYLE LOGO*/
     .logo {
         display: flex;
@@ -229,6 +229,7 @@ li{
         border-radius: 15px;
         margin: 24px auto;
         background-color: rgba(255, 255, 255, 1);
+        position: relative;
     }
 
     .card-img {
@@ -238,8 +239,8 @@ li{
     /*block nouveau sur les cards*/
     .news{
         font-weight: 500;
-        position: relative;
-        left: 73%;
+        position: absolute;
+        right: 20px;
         top: 16px;
         color: rgba(0, 135, 102, 1);
         background-color: rgba(153, 226, 208, 1);
@@ -247,6 +248,7 @@ li{
         font-family: 'Roboto';
         font-size: 14px;
         border-radius: 2px;
+
     }
 
     .card-text h3 {
@@ -271,7 +273,7 @@ li{
         position: absolute;
         top: 10px;
         left: 10px;
-        width: 21px;
+        width: 20px;
     }
 
     /*début de la section footer*/
@@ -391,7 +393,7 @@ li{
         position: absolute;
         top: 10px;
         left: 10px;
-        width: 21px;
+        width: 20px;
     }
 
     #resto-2:checked+.test1 .dislike {
@@ -403,7 +405,7 @@ li{
         position: absolute;
         top: 10px;
         left: 10px;
-        width: 21px;
+        width: 20px;
     }
 
     #resto-3:checked+.test1 .dislike {
@@ -415,7 +417,7 @@ li{
         position: absolute;
         top: 10px;
         left: 10px;
-        width: 21px;
+        width: 20px;
     }
 
     #resto-4:checked+.test1 .dislike {
@@ -427,13 +429,13 @@ li{
         position: absolute;
         top: 10px;
         left: 10px;
-        width: 21px;
+        width: 20px;
     }
-}
+
 
 /* #################################################################### */
 /* partie desktop */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
      /*STYLE LOGO*/
      .logo {
         display: flex;
@@ -621,8 +623,8 @@ li{
     /*block nouveau sur les cards*/
     .news{
         font-weight: 500;
-        position: relative;
-        left: 347px;
+        position: absolute;
+        right: 20px;
         top: 16px;
         color: rgba(0, 135, 102, 1);
         background-color: rgba(153, 226, 208, 1);
@@ -784,7 +786,7 @@ li{
 
     #resto-1:checked+.test1 .like {
         display: inline;
-        width: 25px;
+        width: 20px;
     }
 
     #resto-2:checked+.test1 .dislike {
@@ -793,7 +795,7 @@ li{
 
     #resto-2:checked+.test1 .like {
         display: inline;
-        width: 25px;
+        width: 20px;
     }
 
     #resto-3:checked+.test1 .dislike {
@@ -811,7 +813,7 @@ li{
 
     #resto-4:checked+.test1 .like {
         display: inline;
-        width: 25px;
+        width: 20px;
     }
 
     .footer{
