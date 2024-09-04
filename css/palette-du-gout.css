@@ -88,10 +88,12 @@ display: none;
 
 /*menu*/
 .menu{
+    display: flex;
     background-color: rgba(255, 255, 255, 1);
     border-radius: 15px;
     height: 69px;
     width: 349px;
+    margin-bottom: 15px;
 }
 
 .title-menu{
@@ -115,8 +117,83 @@ display: none;
     font-size: 15px;
 }
 
+.info{
+    display: flex;
+    align-items: center;
+    padding-bottom: 14px;
+    width: 349px;
+    transition: width 0.5s ease;
+    justify-content: space-between;
+}
+
+/*checkbox*/
+#menu1{
+    display: none;
+}
+
+#menu2{
+    display: none;
+}
+
+#menu3{
+    display: none;
+}
+
+/*Au survol de l'élément qui a la class menu*/ 
+.menu:hover{
+    cursor: pointer;
+}
+
+/*Au clic sur le menu*/
+#menu1:checked + .menu .info{
+    width:290px;
+}
+#menu2:checked + .menu .info{
+    width:290px;
+}
+
+#menu3:checked + .menu .info{
+    width:290px;
+}
+
+
+
+#menu1:checked + .menu .check{
+    width:59px;
+
+}
+
+#menu2:checked + .menu .check{
+    width:59px;
+
+}
+
+#menu3:checked + .menu .check{
+    width:59px;
+
+}
+
+.check{
+    width: 0;
+    background-color:rgba(153, 226, 208, 1) ;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    position: relative;
+    top: 0;
+    right: 0;
+    transition: width 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /*Prix des entrées*/
-.prix1{
+
+.price{
+    padding-top: 40px;
+    padding-right: 10px;
+}
+
+/*.prix1{
     display: inline;
     position: absolute;
     right: 40px;
@@ -136,7 +213,7 @@ display: none;
     position: absolute;
     right: 40px;
     top: 368px;
-}
+}*/
 
 /*Prix des plats*/
 .prix4{
