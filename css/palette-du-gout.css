@@ -25,6 +25,7 @@ body{
     z-index: 11;
     left: 26px;
     font-size: 20px;
+    color: black;
 }
 
 .palette-du-gout-img {
@@ -45,15 +46,35 @@ body{
     width: 100%;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    padding-left: 11px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5px;
 }
+
 .title-conteneur{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 76%;
 }
 
+/* Gestion du coeur pour le titre palette du goût */
+#resto-2 {
+    display: none;
+}
 
+#resto-2:checked+.test1 .dislike {
+    display: none;
+}
+
+#resto-2:checked+.test1 .like {
+    display: inline;
+    position: absolute;
+   /* width: 20px;*/
+    top: 31px;
+    right: 41px;
+}
 /*H2 style nom du restaurant*/
 .name-restaurant{
     font-family: "Shrikhand";
@@ -69,7 +90,7 @@ body{
 .dislike{
     display: inline;
     position: absolute;
-    top: 34px;
+    top: 31px;
     right: 41px;
 
 }
@@ -139,12 +160,34 @@ display: none;
     display: none;
 }
 
-/*Au survol de l'élément qui a la class menu*/ 
+#menu4{
+    display: none;
+}
+#menu5{
+    display: none;
+}
+
+#menu6{
+    display: none;
+}
+
+#menu7{
+    display: none;
+}
+
+#menu8{
+    display: none;
+}
+
+#menu9{
+    display: none;
+}
+/*Au survol des menus pour changer l 'apparence de la souris*/ 
 .menu:hover{
     cursor: pointer;
 }
 
-/*Au clic sur le menu*/
+/*Au clic sur le menu on sélectionne l'élément qui suit immédiatement le checkbox et on lui donne une nouvelle largeur*/
 #menu1:checked + .menu .info{
     width:290px;
 }
@@ -156,8 +199,28 @@ display: none;
     width:290px;
 }
 
+#menu4:checked + .menu .info{
+    width:290px;
+}
+#menu5:checked + .menu .info{
+    width:290px;
+}
 
+#menu6:checked + .menu .info{
+    width:290px;
+}
 
+#menu7:checked + .menu .info{
+    width:290px;
+}
+#menu8:checked + .menu .info{
+    width:290px;
+}
+
+#menu9:checked + .menu .info{
+    width:290px;
+}
+/*Si le checkbox est cocher on séléctionne l'élément qui a la class check se trouvant dans l'élément qui a la class menu et on lui donne une nouvelle largeur */ 
 #menu1:checked + .menu .check{
     width:59px;
 
@@ -173,6 +236,38 @@ display: none;
 
 }
 
+#menu4:checked + .menu .check{
+    width:59px;
+
+}
+
+#menu5:checked + .menu .check{
+    width:59px;
+
+}
+
+#menu6:checked + .menu .check{
+    width:59px;
+
+}
+
+#menu7:checked + .menu .check{
+    width:59px;
+
+}
+
+#menu8:checked + .menu .check{
+    width:59px;
+
+}
+
+#menu9:checked + .menu .check{
+    width:59px;
+
+}
+
+
+
 .check{
     width: 0;
     background-color:rgba(153, 226, 208, 1) ;
@@ -186,6 +281,59 @@ display: none;
     justify-content: center;
     align-items: center;
 }
+
+.check img{
+    display: none;
+}
+
+
+
+#menu1:checked + .menu .check img{
+    display: inline;
+
+}
+
+#menu2:checked + .menu .check img{
+    display: inline;
+
+}
+
+#menu3:checked + .menu .check img{
+   display: inline;
+
+}
+
+#menu4:checked + .menu .check img{
+    display: inline;
+
+}
+
+#menu5:checked + .menu .check img{
+    display: inline;
+
+}
+
+#menu6:checked + .menu .check img{
+   display: inline;
+
+}
+
+#menu7:checked + .menu .check img{
+    display: inline;
+
+}
+
+#menu8:checked + .menu .check img{
+    display: inline;
+
+}
+
+#menu9:checked + .menu .check img{
+   display: inline;
+
+}
+
+
 /*Prix des entrées*/
 
 .price{
@@ -193,83 +341,21 @@ display: none;
     padding-right: 10px;
 }
 
-/*.prix1{
-    display: inline;
-    position: absolute;
-    right: 40px;
-    top:195px;
-}
-
-.prix2{
-    display: inline;
-    position: absolute;
-    right: 40px;
-    top: 282px;
-}
-
-
-.prix3{
-    display: inline;
-    position: absolute;
-    right: 40px;
-    top: 368px;
-}*/
-
-/*Prix des plats*/
-.prix4{
-    display: inline;
-    position: absolute;
-    right: 40px;
-    top: 508px;
-}
-
-.prix5{
-    display: inline;
-    position: absolute;
-    right: 40px;
-    bottom: 436px;
-}
-
-.prix6{
-    display: inline;
-    position: absolute;
-    right: 40px;
-    bottom: 348px;
-}
-
-/*Prix des desserts*/
-.prix7{
-    isplay: inline;
-    position: absolute;
-    right: 40px;
-    bottom: 210px;
-}
-
-.prix8{
-    display: inline;
-    position: absolute;
-    right: 40px;
-    bottom: 122px;
-}
-
-.prix9{
-    display: inline;
-    position: absolute;
-    right: 40px;
-    bottom: 36px;
-}
 
 
 /*Bouton commander*/
 .btn-commander{
-    /*padding: 15px;
+    padding: 15px;
     background: linear-gradient(rgba(255, 121, 218, 1), rgba(147, 86, 220, 1));
     border: none;
     border-radius: 25px;
     color: white;
     width: 218px;
     height: 50px;
-    margin-top: 15px;*/
+    margin-top: 15px;
+    font-size: 16px;
+    font-family: 'Roboto';
+    font-weight: 500;
 }
 
 
@@ -277,11 +363,10 @@ display: none;
 .footer{
     display: inline;
     position: absolute;
-    top: 95em;
+    top: 89.01em;
     background-color: rgba(53, 53, 53, 1);
     color: white;
     width: 100%;
-    padding-left: 11px;
     font-family: "Roboto";
 }
 

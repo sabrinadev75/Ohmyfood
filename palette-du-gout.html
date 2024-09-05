@@ -18,8 +18,10 @@
 <body>
      <!--début du header-->
      <header>
-        <i class="fa-solid fa-arrow-left"></i>
         <div class="logo">
+            <a href="index.html">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
             <img src="images/logo/ohmyfood@2x.svg" alt="logo">
         </div>
     </header>
@@ -34,20 +36,17 @@
     <div class="block-conteneur">
         <div class="title-conteneur">
             <h2 class="name-restaurant">La palette du goût</h2>
-            <label for="resto-2" class="test1">
+            <input type="checkbox" id="resto-2">
+            <label class="test1" for="resto-2">
                 <img src="./images/icon/Like.png " class="dislike" alt="coeur"> 
                 <img src="./images/icon/Like.svg" class="like" alt="like image">
             </label>
-            <!--<i class="fa-regular fa-heart"></i>-->
+          
         </div>
 
         <div class="entree">
           <h4 class="title-menu">ENTRÉES</h4>
-          <!--<div class="menu">
-            <h3 class="title-h3">Fricassée d'escargots</h3>
-            <p class="menu-p">Au piment d'Éspelette</p>
-            <span class="prix1">25€</span>
-          </div>-->
+          
           <input type="checkbox" id="menu1">
           <label class="menu" for="menu1"> 
             <div class="info">
@@ -97,64 +96,116 @@
                 <img src="images/icon/Check.svg" alt="check">
             </div>
           </label>
-          <!--<div class="menu">
-            <h3 class="title-h3">Foie gras de canard mi-cuit</h3>
-            <p class="menu-p">Et ses copeaux de truffe noire</p>
-            <span class="prix2">35€</span>
-          </div>
-
-          <div class="menu">
-            <h3 class="title-h3">Oeuf au plat</h3>
-            <p class="menu-p">Assaisonné à la truffe sur lit de caviar</p>
-            <span class="prix3">20€</span>
-          </div>-->
         </div>
 
 
 
         <div class="plat">
             <h4 class="title-menu">PLATS</h4>
-            <div class="menu">
-                <h3 class="title-h3">Filet de boeuf aux herbes</h3>
-                <p class="menu-p">Accompagné de sa ribambelle de légumes</p>
-                <span class="prix4">40€</span>
+            <input type="checkbox" id="menu4">
+            <label class="menu" for="menu4"> 
+              <div class="info">
+                  <div>
+                      <h3 class="title-h3">Filet de boeuf aux herbes</h3>
+                      <p class="menu-p">Accompagné de sa ribambelle de légumes</p> 
+                  </div>
+                  <div class="price">
+                      <span class="prix1">40€</span>
+                  </div>
               </div>
-    
-              <div class="menu">
-                <h3 class="title-h3">Parmentier de queue de boeuf</h3>
-                <p class="menu-p">À la truffe noire sur sa purée de panais</p>
-                <span class="prix5">35€</span>
+              <div class="check"> 
+                  <img src="images/icon/Check.svg" alt="check">
               </div>
-    
-              <div class="menu">
-                <h3 class="title-h3">Filet de turbot</h3>
-                <p class="menu-p">Aux agrumes</p>
-                <span class="prix6">44€</span>
+            </label>
+
+
+
+            <input type="checkbox" id="menu5">
+            <label class="menu" for="menu5"> 
+              <div class="info">
+                  <div>
+                      <h3 class="title-h3">Parmentier de queue de boeuf</h3>
+                      <p class="menu-p">À la truffe noire sur sa purée de panais</p> 
+                  </div>
+                  <div class="price">
+                      <span class="prix1">35€</span>
+                  </div>
               </div>
+              <div class="check"> 
+                  <img src="images/icon/Check.svg" alt="check">
+              </div>
+            </label>
+           
+
+            <input type="checkbox" id="menu6">
+            <label class="menu" for="menu6"> 
+              <div class="info">
+                  <div>
+                      <h3 class="title-h3">Filet de turbot</h3>
+                      <p class="menu-p">Aux agrumes </p> 
+                  </div>
+                  <div class="price">
+                      <span class="prix1">44€</span>
+                  </div>
+              </div>
+              <div class="check"> 
+                  <img src="images/icon/Check.svg" alt="check">
+              </div>
+            </label> 
             
         </div>
 
 
         <div class="dessert">
             <h4 class="title-menu">DESSERTS</h4>
+            <input type="checkbox" id="menu7">
+            <label class="menu" for="menu7"> 
+              <div class="info">
+                  <div>
+                      <h3 class="title-h3">Paris-Brest</h3>
+                      <p class="menu-p">Revisité </p> 
+                  </div>
+                  <div class="price">
+                      <span class="prix1">18€</span>
+                  </div>
+              </div>
+              <div class="check"> 
+                  <img src="images/icon/Check.svg" alt="check">
+              </div>
+            </label> 
 
-            <div class="menu">
-                <h3 class="title-h3">Paris-Brest</h3>
-                <p class="menu-p">Revisité</p>
-                <span class="prix7">18€</span>
+            <input type="checkbox" id="menu8">
+            <label class="menu" for="menu8"> 
+              <div class="info">
+                  <div>
+                      <h3 class="title-h3">Macaron au chocolat</h3>
+                      <p class="menu-p">Et glace à la vanille de Madagascar </p> 
+                  </div>
+                  <div class="price">
+                      <span class="prix1">22€</span>
+                  </div>
               </div>
+              <div class="check"> 
+                  <img src="images/icon/Check.svg" alt="check">
+              </div>
+            </label> 
     
-              <div class="menu">
-                <h3 class="title-h3">Macaron au chocolat d'exception</h3>
-                <p class="menu-p">Et glace à la vanille de Madagascar</p>
-                <span class="prix8">22€</span>
+
+            <input type="checkbox" id="menu9">
+            <label class="menu" for="menu9"> 
+              <div class="info">
+                  <div>
+                      <h3 class="title-h3">Mousse au chocolat</h3>
+                      <p class="menu-p">Au piment d'Espelette et à la truffe noire </p> 
+                  </div>
+                  <div class="price">
+                      <span class="prix1">23€</span>
+                  </div>
               </div>
-    
-              <div class="menu">
-                <h3 class="title-h3">Mousse au chocolat</h3>
-                <p class="menu-p">Au piment d'Espelette et à la truffe noire</p>
-                <span class="prix9">23€</span>
+              <div class="check"> 
+                  <img src="images/icon/Check.svg" alt="check">
               </div>
+            </label> 
         </div>
 
         <div class="button-commander">
