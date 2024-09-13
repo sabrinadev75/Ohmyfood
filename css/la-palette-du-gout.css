@@ -271,8 +271,69 @@ display: none;
 
 }
 
+/*Pour pouvoir tronquer le texte du menu au clic pour cacher le texte*/
+#menu1:checked + .menu .menu-p{
+    width:220px;
+    white-space: nowrap;       
+    overflow: hidden;           
+    text-overflow: ellipsis;
+}
 
+#menu2:checked + .menu .menu-p{
+    width:220px;
+    white-space: nowrap;       
+    overflow: hidden;           
+    text-overflow: ellipsis;
+}
 
+#menu3:checked + .menu .menu-p{
+    width:220px;
+    white-space: nowrap;       
+    overflow: hidden;           
+    text-overflow: ellipsis;
+}
+
+#menu4:checked + .menu .menu-p{
+    width:220px;
+    white-space: nowrap;       
+    overflow: hidden;           
+    text-overflow: ellipsis;
+}
+
+#menu5:checked + .menu .menu-p{
+    width:220px;
+    white-space: nowrap;       
+    overflow: hidden;           
+    text-overflow: ellipsis;
+}
+
+#menu6:checked + .menu .menu-p{
+    width:220px;
+    white-space: nowrap;       
+    overflow: hidden;           
+    text-overflow: ellipsis;
+}
+
+#menu7:checked + .menu .menu-p{
+    width: 220px;
+    white-space: nowrap;       
+    overflow: hidden;           
+    text-overflow: ellipsis;
+}
+
+#menu8:checked + .menu .menu-p{
+    width:220px;
+    white-space: nowrap;       
+    overflow: hidden;           
+    text-overflow: ellipsis;
+}
+
+#menu9:checked + .menu .menu-p{
+    width:220px;
+    white-space: nowrap;       
+    overflow: hidden;           
+    text-overflow: ellipsis;
+}
 .check{
     width: 0;
     background-color:rgba(153, 226, 208, 1) ;
@@ -285,6 +346,13 @@ display: none;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#menu5:checked + .menu .title-h3{
+    width:220px;
+    white-space: nowrap;       
+    overflow: hidden;           
+    text-overflow: ellipsis;
 }
 
 .check img{
