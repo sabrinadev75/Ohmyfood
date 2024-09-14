@@ -4,6 +4,10 @@ body{
     padding: 0;
 }
 
+li {
+    list-style: none;
+}
+
 /*fléche du logo(header)*/
 .fa-arrow-left {
     position: absolute;
@@ -133,6 +137,9 @@ display: none;
     padding-left: 15px;
     margin-bottom: 0px;
     padding-top: 10px;
+    white-space: nowrap;   /*empêche le retour à la ligne*/
+    overflow: hidden;     /*cache le texte qui dépasse*/      
+    text-overflow: ellipsis;/* pour ajouter les points de suspension*/
 }
 
 .menu-p{
@@ -141,6 +148,9 @@ display: none;
     color: rgba(0, 0, 0, 0.6);
     font-family: 'Roboto';
     font-size: 15px;
+    white-space: nowrap;       
+    overflow: hidden;           
+    text-overflow: ellipsis;
 }
 
 .info{
@@ -532,9 +542,244 @@ display: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 35px;
+    padding-bottom: 55px;
     margin: auto;
+}
+/* nom du restaurant + coeur*/
+.title-conteneur{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+/* Gestion du coeur pour le titre palette du goût */
+#resto-2 {
+    display: none;
+}
+
+#resto-2:checked+.test1 .dislike {
+    display: none;
+}
+
+#resto-2:checked+.test1 .like {
+    display: inline;
+    position: absolute;
+    top: 33px;
+    left: 42.8em;
+}
+/*H2 style nom du restaurant*/
+.name-restaurant{
+    font-family: "Shrikhand";
+    font-style: italic;
+    font-weight: 900;
+    font-size: 28px;
+    color: rgba(16, 16, 16, 1);
+    margin-left: -25px;
+    margin-right: -27px;
+}
+
+/*Icone coeur*/
+.dislike{
+    display: inline;
+    position: absolute;
+    top: 33px;
+    left: 42.8em;
+
 }
 
 
+.like{
+display: none;
+
+}
+
+
+.test1:hover {
+    cursor: pointer;
+}
+/*titre des menus*/
+.title-menu {
+    font-weight: normal;
+    font-family: Roboto;
+    border-bottom: 3px solid rgba(153, 226, 208, 1);
+    width: 6.1%;
+    padding-bottom: 5px;
+    font-weight: 200;
+    font-size: 16px;
+}
+/*tire entrée,plat et dessert*/
+.entree{
+    width: 634px;
+}
+
+.plat{
+    width: 634px;
+}
+
+.dessert{
+    width: 634px;
+}
+
+/*block menu*/
+.menu {
+    display: flex;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 15px;
+    height: 72px;
+    width: 634px;
+    margin-bottom: 15px;
+    box-shadow: 0 4.01px 15.04px 0 rgba(0, 0, 0, 0.1);
+}
+
+/*tritre du menu*/
+.title-h3{
+    padding-left: 15px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    white-space: nowrap;   /*empêche le retour à la ligne*/
+    overflow: hidden;     /*cache le texte qui dépasse*/      
+    text-overflow: ellipsis;/* pour ajouter les points de suspension*/
+}
+
+/*Paragraphe du menu*/
+.menu-p{
+    padding-left: 15px; 
+    margin-top: 4px;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: 'Roboto';
+    font-size: 15px;
+    white-space: nowrap;       
+    overflow: hidden;           
+    text-overflow: ellipsis;
+}
+
+/*Div qui contient le titre, le paragraphe et le prix*/
+.info{
+    display: flex;
+    align-items: center;
+    padding-bottom: 14px;
+    width: 349px;
+    transition: width 0.5s ease;
+    justify-content: space-between;
+}
+
+/*prix des menus*/
+.price{
+    padding-top: 40px;
+    padding-right: 10px;
+    position: relative;
+    left: 18em;
+    font-size: 15.4px;
+    font-weight: 500;
+    font-family: 'Roboto';
+    color: rgba(53, 53, 53, 1);
+}
+
+/*checkbox*/
+#menu1{
+    display: none;
+}
+
+#menu2{
+    display: none;
+}
+
+#menu3{
+    display: none;
+}
+
+#menu4{
+    display: none;
+}
+#menu5{
+    display: none;
+}
+
+#menu6{
+    display: none;
+}
+
+#menu7{
+    display: none;
+}
+
+#menu8{
+    display: none;
+}
+
+#menu9{
+    display: none;
+}
+/*Au survol des menus pour changer l 'apparence de la souris*/ 
+.menu:hover{
+    cursor: pointer;
+}
+
+/*bouton commander*/
+.button-commander {
+    margin-top: 12px;
+}
+
+.btn-commander {
+    padding: 15px;
+    background: linear-gradient(rgba(255, 121, 218, 1), rgba(147, 86, 220, 1));
+    border: none;
+    border-radius: 25px;
+    color: white;
+    width: 186px;
+    height: 50px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+/*Footer*/
+.footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(53, 53, 53, 1);
+    color: rgba(255, 255, 255, 1);
+    width: 100%;
+    top: 102.01em;
+    left: 0;
+    height: 80px;
+    padding-top: 42px;
+    
+}
+
+.footer-logo {
+    margin-left: 90px;
+    padding-bottom: 5px;
+    margin-right: 70px;
+}
+
+.logo2 {
+    font-family: "Shrikhand";
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+}
+
+.link-footer{
+    padding: 0;
+    display: flex;
+}
+
+.link {
+    /*padding-top: 7px;*/
+    padding: 0 15px;
+
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    font-family: 'Roboto';
+}
 }
