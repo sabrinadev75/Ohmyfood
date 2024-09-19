@@ -17,6 +17,9 @@ li {
     font-size: 20px;
     color: black;
 }
+
+
+
 /*début de la version mobile*/
 @media(max-width:767.98px){
 /*Début du header*/
@@ -197,6 +200,10 @@ display: none;
 #menu9{
     display: none;
 }
+
+#menu10{
+    display: none;
+}
 /*Au survol des menus pour changer l 'apparence de la souris*/ 
 .menu:hover{
     cursor: pointer;
@@ -206,6 +213,7 @@ display: none;
 #menu1:checked + .menu .info{
     width:290px;
 }
+
 #menu2:checked + .menu .info{
     width:290px;
 }
@@ -235,10 +243,13 @@ display: none;
 #menu9:checked + .menu .info{
     width:290px;
 }
+
+#menu10:checked + .menu .info{
+    width:290px;
+}
 /*Si le checkbox est cocher on séléctionne l'élément qui a la class check se trouvant dans l'élément qui a la class menu et on lui donne une nouvelle largeur */ 
 #menu1:checked + .menu .check{
     width:59px;
-
 }
 
 #menu2:checked + .menu .check{
@@ -253,32 +264,30 @@ display: none;
 
 #menu4:checked + .menu .check{
     width:59px;
-
 }
 
 #menu5:checked + .menu .check{
     width:59px;
-
 }
 
 #menu6:checked + .menu .check{
     width:59px;
-
 }
 
 #menu7:checked + .menu .check{
     width:59px;
-
 }
 
 #menu8:checked + .menu .check{
     width:59px;
-
 }
 
 #menu9:checked + .menu .check{
     width:59px;
+}
 
+#menu10:checked + .menu .check{
+    width:59px;
 }
 
 /*Pour pouvoir tronquer le texte du menu au clic pour cacher le texte*/
@@ -339,6 +348,13 @@ display: none;
 }
 
 #menu9:checked + .menu .menu-p{
+    width:220px;
+    white-space: nowrap;       
+    overflow: hidden;           
+    text-overflow: ellipsis;
+}
+
+#menu10:checked + .menu .menu-p{
     width:220px;
     white-space: nowrap;       
     overflow: hidden;           
@@ -415,6 +431,11 @@ display: none;
    display: inline;
 
 }
+
+#menu10:checked + .menu .check img{
+    display: inline;
+ 
+ }
 /*ajout de l'espace au dessus du titre dessert */
 .dessert{
     margin-top: 6px;
@@ -659,16 +680,36 @@ display: none;
     display: flex;
     align-items: center;
     padding-bottom: 14px;
-    width: 349px;
+    width: 634px;
     transition: width 0.5s ease;
     justify-content: space-between;
+}
+
+/*Animation verte qui s'affiche au survol*/
+.check{
+    width: 0;
+    background-color:rgba(153, 226, 208, 1) ;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    position: relative;
+    top: 0;
+    right: 0;
+    transition: width 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*cacher l'icone qui se trouve sur la partie verte de l'animation*/
+.check img{
+    display: none;
 }
 
 /*prix des menus*/
 .price{
     padding-top: 40px;
     padding-right: 10px;
-    position: relative;
+    /*position: relative;*/
     left: 18em;
     font-size: 15.4px;
     font-weight: 500;
@@ -711,9 +752,23 @@ display: none;
 #menu9{
     display: none;
 }
-/*Au survol des menus pour changer l 'apparence de la souris*/ 
-.menu:hover{
-    cursor: pointer;
+
+#menu10{
+    display: none;
+}
+
+/*Animation des menus au survol*/
+.menu:hover .info{
+    width: 575px;
+}
+
+.menu:hover .check{
+    width: 59px;
+
+}
+
+.menu:hover .check img{
+    display: inline;
 }
 
 /*bouton commander*/
@@ -734,6 +789,12 @@ display: none;
     font-family: 'Roboto';
     font-weight: 500;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-commander:hover{
+background:linear-gradient(rgba(255, 121, 218, 0.8), rgba(147, 86, 220, 0.8));
+box-shadow:0 4px 15px 0 rgba(0, 0, 0, 0.40);
+color: white;
 }
 
 /*Footer*/
