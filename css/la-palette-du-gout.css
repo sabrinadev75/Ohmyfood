@@ -1,5 +1,5 @@
 /*style globale*/
-body{
+body {
     margin: 0;
     padding: 0;
 }
@@ -20,548 +20,619 @@ li {
 
 
 
+
+
 /*début de la version mobile*/
-@media(max-width:767.98px){
-/*Début du header*/
-/*STYLE LOGO*/
-.logo {
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-    position: fixed;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 1);
-    z-index: 5;
-}
-
-
-
-.palette-du-gout-img {
-    padding-top:70px ;
-
-}
-
-.palette-du-gout-img img{
-    width: 100%;
-    height: 275px;
-}
-
-/*block qui contient le Menu*/
-.block-conteneur{
-    background-color: rgba(246, 246, 246, 1);
-    position: absolute;
-    top: 300px;
-    width: 100%;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 35px;
-}
-
-.title-conteneur{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 76%;
-}
-
-/* Gestion du coeur pour le titre palette du goût */
-#resto-2 {
-    display: none;
-}
-
-#resto-2:checked+.test1 .dislike {
-    display: none;
-}
-
-#resto-2:checked+.test1 .like {
-    display: inline;
-    position: absolute;
-   /* width: 20px;*/
-    top: 31px;
-    right: 41px;
-}
-
-/*H2 style nom du restaurant*/
-.name-restaurant{
-    font-family: "Shrikhand";
-    font-style: italic;
-    font-weight: 900;
-    font-size: 28px;
-    color: rgba(16, 16, 16, 1);
-    margin-left: -25px;
-    margin-right: -27px;
-}
-
-/*Icone coeur*/
-.dislike{
-    display: inline;
-    position: absolute;
-    top: 31px;
-    right: 41px;
-
-}
-
-
-.like{
-display: none;
-
-}
-
-
-.test1:hover {
-    cursor: pointer;
-}
-
-
-/*menu*/
-.menu{
-    display: flex;
-    background-color: rgba(255, 255, 255, 1);
-    border-radius: 15px;
-    height: 69px;
-    width: 349px;
-    margin-bottom: 15px;
-    box-shadow: 0 4.01px 15.04px 0 rgba(0, 0, 0, 0.1);
-}
-
-.title-menu{
-    font-weight: normal;
-    font-family: Roboto;
-    border-bottom: 3px solid rgba(153, 226, 208, 1);
-    width: 11%;
-    padding-bottom: 5px;
-    font-weight: 200;
-    font-size: 16px;
-}
-.title-h3{
-    padding-left: 15px;
-    margin-bottom: 0px;
-    padding-top: 10px;
-    white-space: nowrap;   /*empêche le retour à la ligne*/
-    overflow: hidden;     /*cache le texte qui dépasse*/      
-    text-overflow: ellipsis;/* pour ajouter les points de suspension*/
-}
-
-.menu-p{
-    padding-left: 15px; 
-    margin-top: 4px;
-    color: rgba(0, 0, 0, 0.6);
-    font-family: 'Roboto';
-    font-size: 15px;
-    white-space: nowrap;       
-    overflow: hidden;           
-    text-overflow: ellipsis;
-}
-
-.info{
-    display: flex;
-    align-items: center;
-    padding-bottom: 14px;
-    width: 349px;
-    transition: width 0.5s ease;
-    justify-content: space-between;
-}
-
-/*checkbox*/
-#menu1{
-    display: none;
-}
-
-#menu2{
-    display: none;
-}
-
-#menu3{
-    display: none;
-}
-
-#menu4{
-    display: none;
-}
-#menu5{
-    display: none;
-}
-
-#menu6{
-    display: none;
-}
-
-#menu7{
-    display: none;
-}
-
-#menu8{
-    display: none;
-}
-
-#menu9{
-    display: none;
-}
-
-#menu10{
-    display: none;
-}
-/*Au survol des menus pour changer l 'apparence de la souris*/ 
-.menu:hover{
-    cursor: pointer;
-}
-
-/*Au clic sur le menu on sélectionne l'élément qui suit immédiatement le checkbox et on lui donne une nouvelle largeur*/
-#menu1:checked + .menu .info{
-    width:290px;
-}
-
-#menu2:checked + .menu .info{
-    width:290px;
-}
-
-#menu3:checked + .menu .info{
-    width:290px;
-}
-
-#menu4:checked + .menu .info{
-    width:290px;
-}
-#menu5:checked + .menu .info{
-    width:290px;
-}
-
-#menu6:checked + .menu .info{
-    width:290px;
-}
-
-#menu7:checked + .menu .info{
-    width:290px;
-}
-#menu8:checked + .menu .info{
-    width:290px;
-}
-
-#menu9:checked + .menu .info{
-    width:290px;
-}
-
-#menu10:checked + .menu .info{
-    width:290px;
-}
-/*Si le checkbox est cocher on séléctionne l'élément qui a la class check se trouvant dans l'élément qui a la class menu et on lui donne une nouvelle largeur */ 
-#menu1:checked + .menu .check{
-    width:59px;
-}
-
-#menu2:checked + .menu .check{
-    width:59px;
-
-}
-
-#menu3:checked + .menu .check{
-    width:59px;
-
-}
-
-#menu4:checked + .menu .check{
-    width:59px;
-}
-
-#menu5:checked + .menu .check{
-    width:59px;
-}
-
-#menu6:checked + .menu .check{
-    width:59px;
-}
-
-#menu7:checked + .menu .check{
-    width:59px;
-}
-
-#menu8:checked + .menu .check{
-    width:59px;
-}
-
-#menu9:checked + .menu .check{
-    width:59px;
-}
-
-#menu10:checked + .menu .check{
-    width:59px;
-}
-
-/*Pour pouvoir tronquer le texte du menu au clic pour cacher le texte*/
-#menu1:checked + .menu .menu-p{
-    width:220px;
-    white-space: nowrap;       
-    overflow: hidden;           
-    text-overflow: ellipsis;
-}
-
-#menu2:checked + .menu .menu-p{
-    width:220px;
-    white-space: nowrap;       
-    overflow: hidden;           
-    text-overflow: ellipsis;
-}
-
-#menu3:checked + .menu .menu-p{
-    width:220px;
-    white-space: nowrap;       
-    overflow: hidden;           
-    text-overflow: ellipsis;
-}
-
-#menu4:checked + .menu .menu-p{
-    width:220px;
-    white-space: nowrap;       
-    overflow: hidden;           
-    text-overflow: ellipsis;
-}
-
-#menu5:checked + .menu .menu-p{
-    width:220px;
-    white-space: nowrap;       
-    overflow: hidden;           
-    text-overflow: ellipsis;
-}
-
-#menu6:checked + .menu .menu-p{
-    width:220px;
-    white-space: nowrap;       
-    overflow: hidden;           
-    text-overflow: ellipsis;
-}
-
-#menu7:checked + .menu .menu-p{
-    width: 220px;
-    white-space: nowrap;       
-    overflow: hidden;           
-    text-overflow: ellipsis;
-}
-
-#menu8:checked + .menu .menu-p{
-    width:220px;
-    white-space: nowrap;       
-    overflow: hidden;           
-    text-overflow: ellipsis;
-}
-
-#menu9:checked + .menu .menu-p{
-    width:220px;
-    white-space: nowrap;       
-    overflow: hidden;           
-    text-overflow: ellipsis;
-}
-
-#menu10:checked + .menu .menu-p{
-    width:220px;
-    white-space: nowrap;       
-    overflow: hidden;           
-    text-overflow: ellipsis;
-}
-.check{
-    width: 0;
-    background-color:rgba(153, 226, 208, 1) ;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    position: relative;
-    top: 0;
-    right: 0;
-    transition: width 0.5s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#menu5:checked + .menu .title-h3{
-    width:220px;
-    white-space: nowrap;       
-    overflow: hidden;           
-    text-overflow: ellipsis;
-}
-
-.check img{
-    display: none;
-}
-
-
-
-#menu1:checked + .menu .check img{
-    display: inline;
-
-}
-
-#menu2:checked + .menu .check img{
-    display: inline;
-
-}
-
-#menu3:checked + .menu .check img{
-   display: inline;
-
-}
-
-#menu4:checked + .menu .check img{
-    display: inline;
-
-}
-
-#menu5:checked + .menu .check img{
-    display: inline;
-
-}
-
-#menu6:checked + .menu .check img{
-   display: inline;
-
-}
-
-#menu7:checked + .menu .check img{
-    display: inline;
-
-}
-
-#menu8:checked + .menu .check img{
-    display: inline;
-
-}
-
-#menu9:checked + .menu .check img{
-   display: inline;
-
-}
-
-#menu10:checked + .menu .check img{
-    display: inline;
- 
- }
-/*ajout de l'espace au dessus du titre dessert */
-.dessert{
-    margin-top: 6px;
-}
-
-/*Prix des entrées*/
-
-.price{
-    padding-top: 40px;
-    padding-right: 10px;
-}
-
-
-
-/*Bouton commander*/
-.button-commander{
-    margin-top: 12px;
-}
-
-
-.btn-commander{
-    padding: 15px;
-    background: linear-gradient(rgba(255, 121, 218, 1), rgba(147, 86, 220, 1));
-    border: none;
-    border-radius: 25px;
-    color: white;
-    width: 186px;
-    height: 50px;
-    margin-top: 15px;
-    font-size: 16px;
-    font-family: 'Roboto';
-    font-weight: 500;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
-}
-
-
-/*footer*/
-.footer{
-    display: inline;
-    position: absolute;
-    top: 92.01em;
-    background-color: rgba(53, 53, 53, 1);
-    color: rgba(255, 255, 255, 1);
-    width: 100%;
-}
-
-.logo2{
-    margin-left: 22px;
-    font-family: 'Shrikhand';
-    font-style: italic;
-    font-weight:unset;
-    font-size: 18px;
+@media(max-width:767.98px) {
+
+    /*Début du header*/
+    /*STYLE LOGO*/
+    .logo {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+        position: fixed;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 1);
+        z-index: 5;
+    }
+
+
+
+    .palette-du-gout-img {
+        padding-top: 70px;
+
+    }
+
+    .palette-du-gout-img img {
+        width: 100%;
+        height: 275px;
+    }
+
+    /*block qui contient le Menu*/
+    .block-conteneur {
+        background-color: rgba(246, 246, 246, 1);
+        position: absolute;
+        top: 300px;
+        width: 100%;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 35px;
+    }
+
+    .title-conteneur {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 76%;
+    }
+
+    /* Gestion du coeur pour le titre palette du goût */
+    #resto-2 {
+        display: none;
+    }
+
+    #resto-2:checked+.test1 .dislike {
+        display: none;
+    }
+
+    #resto-2:checked+.test1 .like {
+        display: inline;
+        position: absolute;
+        /* width: 20px;*/
+        top: 31px;
+        right: 41px;
+    }
+
+    /*H2 style nom du restaurant*/
+    .name-restaurant {
+        font-family: "Shrikhand";
+        font-style: italic;
+        font-weight: 900;
+        font-size: 28px;
+        color: rgba(16, 16, 16, 1);
+        margin-left: -25px;
+        margin-right: -27px;
+    }
+
+    /*Icone coeur*/
+    .dislike {
+        display: inline;
+        position: absolute;
+        top: 31px;
+        right: 41px;
+
+    }
+
+
+    .like {
+        display: none;
+
+    }
+
+
+    .test1:hover {
+        cursor: pointer;
+    }
+
+
+    /*menu*/
+    .menu {
+        display: flex;
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 15px;
+        height: 69px;
+        width: 349px;
+        margin-bottom: 15px;
+        box-shadow: 0 4.01px 15.04px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .title-menu {
+        font-weight: normal;
+        font-family: Roboto;
+        border-bottom: 3px solid rgba(153, 226, 208, 1);
+        width: 11%;
+        padding-bottom: 5px;
+        font-weight: 200;
+        font-size: 16px;
+    }
+
+    /*tritre du menu*/
+    .title-h3 {
+        padding-left: 15px;
+        margin-bottom: 0px;
+        padding-top: 10px;
+        white-space: nowrap;
+        /*empêche le retour à la ligne*/
+        overflow: hidden;
+        /*cache le texte qui dépasse*/
+        text-overflow: ellipsis;
+        /* pour ajouter les points de suspension*/
+    }
 
     
-}
+    .menu-p {
+        padding-left: 15px;
+        margin-top: 4px;
+        color: rgba(0, 0, 0, 0.6);
+        font-family: 'Roboto';
+        font-size: 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
-.footer-link{
-    text-decoration: none;
-    color: white;
-    line-height: 26px;
-    
+    .info {
+        display: flex;
+        align-items: center;
+        padding-bottom: 14px;
+        width: 349px;
+        transition: width 0.5s ease;
+        justify-content: space-between;
+    }
 
-}
-.link-footer{
-    list-style: none;
-    padding: 0;
-    font-weight: 400;
-    margin-left: 22px;
-    font-size: 16px;
-    font-family: 'Roboto';
-}
+    /*checkbox*/
+    #menu1 {
+        display: none;
+    }
 
-/*Page La note enchantée*/
-.block-contener{
-    background-color: rgba(246, 246, 246, 1);
-    position: absolute;
-    top: 300px;
-    width: 100%;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 38px;
-}
+    #menu2 {
+        display: none;
+    }
 
-.foter{
-    display: inline;
-    position: absolute;
-    top: 97.7em;
-    background-color: rgba(53, 53, 53, 1);
-    color: rgba(255, 255, 255, 1);
-    width: 100%;
-}
+    #menu3 {
+        display: none;
+    }
 
-.link-foter{
-    list-style: none;
-    padding: 0;
-    font-weight: 400;
-    margin-left: 22px;
-    font-size: 16px;
-    font-family: 'Roboto';
-    padding-bottom: 0.5px;
-}
+    #menu4 {
+        display: none;
+    }
 
-/*modification de l'espace pour le coeur*/
-#resto-2:checked+.test1 .likee {
-    display: inline;
-    position: absolute;
-   /* width: 20px;*/
-    top: 31px;
-    right: 28px;
-}
+    #menu5 {
+        display: none;
+    }
 
-.dislikee{
-    display: inline;
-    position: absolute;
-    top: 31px;
-    right: 28px;
+    #menu6 {
+        display: none;
+    }
 
-}
+    #menu7 {
+        display: none;
+    }
 
-.like{
-    display: none;
-    
+    #menu8 {
+        display: none;
+    }
+
+    #menu9 {
+        display: none;
+    }
+
+    #menu10 {
+        display: none;
+    }
+
+    /*Au survol des menus pour changer l 'apparence de la souris*/
+    .menu:hover {
+        cursor: pointer;
+    }
+
+    /*Au clic sur le menu on sélectionne l'élément qui suit immédiatement le checkbox et on lui donne une nouvelle largeur*/
+    #menu1:checked+.menu .info {
+        width: 290px;
+    }
+
+    #menu2:checked+.menu .info {
+        width: 290px;
+    }
+
+    #menu3:checked+.menu .info {
+        width: 290px;
+    }
+
+    #menu4:checked+.menu .info {
+        width: 290px;
+    }
+
+    #menu5:checked+.menu .info {
+        width: 290px;
+    }
+
+    #menu6:checked+.menu .info {
+        width: 290px;
+    }
+
+    #menu7:checked+.menu .info {
+        width: 290px;
+    }
+
+    #menu8:checked+.menu .info {
+        width: 290px;
+    }
+
+    #menu9:checked+.menu .info {
+        width: 290px;
+    }
+
+    #menu10:checked+.menu .info {
+        width: 290px;
+    }
+
+    /*Si le checkbox est cocher on séléctionne l'élément qui a la class check se trouvant dans l'élément qui a la class menu et on lui donne une nouvelle largeur */
+    #menu1:checked+.menu .check {
+        width: 59px;
+    }
+
+    #menu2:checked+.menu .check {
+        width: 59px;
+
+    }
+
+    #menu3:checked+.menu .check {
+        width: 59px;
+
+    }
+
+    #menu4:checked+.menu .check {
+        width: 59px;
+    }
+
+    #menu5:checked+.menu .check {
+        width: 59px;
+    }
+
+    #menu6:checked+.menu .check {
+        width: 59px;
+    }
+
+    #menu7:checked+.menu .check {
+        width: 59px;
+    }
+
+    #menu8:checked+.menu .check {
+        width: 59px;
+    }
+
+    #menu9:checked+.menu .check {
+        width: 59px;
+    }
+
+    #menu10:checked+.menu .check {
+        width: 59px;
+    }
+
+    /*Pour pouvoir tronquer le texte du menu au clic pour cacher le texte*/
+    #menu1:checked+.menu .menu-p {
+        width: 220px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #menu2:checked+.menu .menu-p {
+        width: 220px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #menu3:checked+.menu .menu-p {
+        width: 220px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #menu4:checked+.menu .menu-p {
+        width: 220px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #menu5:checked+.menu .menu-p {
+        width: 220px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #menu6:checked+.menu .menu-p {
+        width: 220px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #menu7:checked+.menu .menu-p {
+        width: 220px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #menu8:checked+.menu .menu-p {
+        width: 220px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #menu9:checked+.menu .menu-p {
+        width: 220px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #menu10:checked+.menu .menu-p {
+        width: 220px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .check {
+        width: 0;
+        background-color: rgba(153, 226, 208, 1);
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        position: relative;
+        top: 0;
+        right: 0;
+        transition: width 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu5:checked+.menu .title-h3 {
+        width: 220px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #menu3:checked+.menu .title-h3 {
+        width: 220px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #menu4:checked+.menu .title-h3 {
+        width: 220px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .check img {
+        display: none;
+    }
+
+
+
+    #menu1:checked+.menu .check img {
+        display: inline;
+
+    }
+
+    #menu2:checked+.menu .check img {
+        display: inline;
+
+    }
+
+    #menu3:checked+.menu .check img {
+        display: inline;
+
+    }
+
+    #menu4:checked+.menu .check img {
+        display: inline;
+
+    }
+
+    #menu5:checked+.menu .check img {
+        display: inline;
+
+    }
+
+    #menu6:checked+.menu .check img {
+        display: inline;
+
+    }
+
+    #menu7:checked+.menu .check img {
+        display: inline;
+
+    }
+
+    #menu8:checked+.menu .check img {
+        display: inline;
+
+    }
+
+    #menu9:checked+.menu .check img {
+        display: inline;
+
+    }
+
+    #menu10:checked+.menu .check img {
+        display: inline;
+
+    }
+
+    /*ajout de l'espace au dessus du titre dessert */
+    .dessert {
+        margin-top: 6px;
+    }
+
+    /*Prix des entrées*/
+
+    .price {
+        padding-top: 40px;
+        padding-right: 10px;
+    }
+
+
+
+    /*Bouton commander*/
+    .button-commander {
+        margin-top: 12px;
+    }
+
+
+    .btn-commander {
+        padding: 15px;
+        background: linear-gradient(rgba(255, 121, 218, 1), rgba(147, 86, 220, 1));
+        border: none;
+        border-radius: 25px;
+        color: white;
+        width: 186px;
+        height: 50px;
+        margin-top: 15px;
+        font-size: 16px;
+        font-family: 'Roboto';
+        font-weight: 500;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    }
+
+
+    /*footer*/
+    .footer {
+        display: inline;
+        position: absolute;
+        top: 92.01em;
+        background-color: rgba(53, 53, 53, 1);
+        color: rgba(255, 255, 255, 1);
+        width: 100%;
+    }
+
+    .logo2 {
+        margin-left: 22px;
+        font-family: 'Shrikhand';
+        font-style: italic;
+        font-weight: unset;
+        font-size: 18px;
+
+
+    }
+
+    .footer-link {
+        text-decoration: none;
+        color: white;
+        line-height: 26px;
+
+
+    }
+
+    .link-footer {
+        list-style: none;
+        padding: 0;
+        font-weight: 400;
+        margin-left: 22px;
+        font-size: 16px;
+        font-family: 'Roboto';
+    }
+
+    /*Page La note enchantée*/
+    .block-contener {
+        background-color: rgba(246, 246, 246, 1);
+        position: absolute;
+        top: 300px;
+        width: 100%;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 38px;
+    }
+
+    .title-h3 {
+        padding-left: 15px;
+        margin-bottom: 0px;
+        padding-top: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis
+    }
+
+    #menu2:checked+.menu .title-h3 {
+        width: 220px;
+        /*white-space: nowrap;*/
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #menu3:checked+.menu .title-h3 {
+        width: 220px;
+        /*white-space: nowrap;*/
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+
+    #menu4:checked+.menu .title-h3 {
+        width: 220px;
+        /*white-space: nowrap;*/
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    #menu8:checked+.menu .title-h3 {
+        width: 220px;
+        /*white-space: nowrap;*/
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .foter {
+        display: inline;
+        position: absolute;
+        top: 97.7em;
+        background-color: rgba(53, 53, 53, 1);
+        color: rgba(255, 255, 255, 1);
+        width: 100%;
+    }
+
+    .link-foter {
+        list-style: none;
+        padding: 0;
+        font-weight: 400;
+        margin-left: 22px;
+        font-size: 16px;
+        font-family: 'Roboto';
+        padding-bottom: 0.5px;
+    }
+
+    /*modification de l'espace pour le coeur*/
+    #resto-2:checked+.test1 .likee {
+        display: inline;
+        position: absolute;
+        /* width: 20px;*/
+        top: 31px;
+        right: 28px;
+    }
+
+    .dislikee {
+        display: inline;
+        position: absolute;
+        top: 31px;
+        right: 28px;
+
+    }
+
+    .likee {
+        display: none;
+
     }
 
 }
@@ -570,11 +641,9 @@ display: none;
 
 
 
-
-
 /*début de la partie desktop*/
-@media(min-width:768px){
-    body{
+@media(min-width:768px) {
+    body {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -595,375 +664,389 @@ display: none;
 
     /*Image du header*/
 
-.palette-du-gout-img {
-    padding-top:70px ;
-    height: 383px;
-    width: 100%;
+    .palette-du-gout-img {
+        padding-top: 70px;
+        height: 383px;
+        width: 100%;
 
-}
+    }
 
-.palette-du-gout-img img{
-    width: 100%;
-    height: 275px;
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-}
-
-
-/*bloc conteneur*/
-.block-conteneur {
-    background-color: rgba(246, 246, 246, 1);
-    position: absolute;
-    top: 422px;
-    width: 100%;
-    max-width: 1055px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 55px;
-    margin: auto;
-}
-/* nom du restaurant + coeur*/
-.title-conteneur{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-}
-
-/* Gestion du coeur pour le titre palette du goût */
-#resto-2 {
-    display: none;
-}
-
-#resto-2:checked+.test1 .dislike {
-    display: none;
-}
-
-#resto-2:checked+.test1 .like {
-    display: inline;
-    position: absolute;
-    top: 33px;
-    left: 42.8em;
-}
-/*H2 style nom du restaurant*/
-.name-restaurant{
-    font-family: "Shrikhand";
-    font-style: italic;
-    font-weight: 900;
-    font-size: 28px;
-    color: rgba(16, 16, 16, 1);
-    margin-left: -25px;
-    margin-right: -27px;
-}
-
-/*Icone coeur*/
-.dislike{
-    display: inline;
-    position: absolute;
-    top: 33px;
-    left: 42.8em;
-
-}
+    .palette-du-gout-img img {
+        width: 100%;
+        height: 275px;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
 
 
-.like{
-display: none;
+    /*bloc conteneur*/
+    .block-conteneur {
+        background-color: rgba(246, 246, 246, 1);
+        position: absolute;
+        top: 422px;
+        width: 100%;
+        max-width: 1055px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 55px;
+        margin: auto;
+    }
 
-}
+    /* nom du restaurant + coeur*/
+    .title-conteneur {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
+    }
 
-.test1:hover {
-    cursor: pointer;
-}
-/*titre des menus*/
-.title-menu {
-    font-weight: normal;
-    font-family: Roboto;
-    border-bottom: 3px solid rgba(153, 226, 208, 1);
-    width: 6.1%;
-    padding-bottom: 5px;
-    font-weight: 200;
-    font-size: 16px;
-}
-/*tire entrée,plat et dessert*/
-.entree{
-    width: 634px;
-}
+    /* Gestion du coeur pour le titre palette du goût */
+    #resto-2 {
+        display: none;
+    }
 
-.plat{
-    width: 634px;
-}
+    #resto-2:checked+.test1 .dislike {
+        display: none;
+    }
 
-.dessert{
-    width: 634px;
-}
+    #resto-2:checked+.test1 .like {
+        display: inline;
+        position: absolute;
+        top: 33px;
+        left: 42.8em;
+    }
 
-/*block menu*/
-.menu {
-    display: flex;
-    background-color: rgba(255, 255, 255, 1);
-    border-radius: 15px;
-    height: 72px;
-    width: 634px;
-    margin-bottom: 15px;
-    box-shadow: 0 4.01px 15.04px 0 rgba(0, 0, 0, 0.1);
-}
+    /*H2 style nom du restaurant*/
+    .name-restaurant {
+        font-family: "Shrikhand";
+        font-style: italic;
+        font-weight: 900;
+        font-size: 28px;
+        color: rgba(16, 16, 16, 1);
+        margin-left: -25px;
+        margin-right: -27px;
+    }
 
-/*tritre du menu*/
-.title-h3{
-    padding-left: 15px;
-    margin-bottom: 0px;
-    padding-top: 10px;
-    white-space: nowrap;   /*empêche le retour à la ligne*/
-    overflow: hidden;     /*cache le texte qui dépasse*/      
-    text-overflow: ellipsis;/* pour ajouter les points de suspension*/
-}
+    /*Icone coeur*/
+    .dislike {
+        display: inline;
+        position: absolute;
+        top: 33px;
+        left: 42.8em;
 
-/*Paragraphe du menu*/
-.menu-p{
-    padding-left: 15px; 
-    margin-top: 4px;
-    color: rgba(0, 0, 0, 0.6);
-    font-family: 'Roboto';
-    font-size: 15px;
-    white-space: nowrap;       
-    overflow: hidden;           
-    text-overflow: ellipsis;
-}
-
-/*Div qui contient le titre, le paragraphe et le prix*/
-.info{
-    display: flex;
-    align-items: center;
-    padding-bottom: 14px;
-    width: 634px;
-    transition: width 0.5s ease;
-    justify-content: space-between;
-}
-
-/*Animation verte qui s'affiche au survol*/
-.check{
-    width: 0;
-    background-color:rgba(153, 226, 208, 1) ;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    position: relative;
-    top: 0;
-    right: 0;
-    transition: width 0.5s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/*cacher l'icone qui se trouve sur la partie verte de l'animation*/
-.check img{
-    display: none;
-}
-
-/*prix des menus*/
-.price{
-    padding-top: 40px;
-    padding-right: 10px;
-    /*position: relative;*/
-    left: 18em;
-    font-size: 15.4px;
-    font-weight: 500;
-    font-family: 'Roboto';
-    color: rgba(53, 53, 53, 1);
-}
-
-/*checkbox*/
-#menu1{
-    display: none;
-}
-
-#menu2{
-    display: none;
-}
-
-#menu3{
-    display: none;
-}
-
-#menu4{
-    display: none;
-}
-#menu5{
-    display: none;
-}
-
-#menu6{
-    display: none;
-}
-
-#menu7{
-    display: none;
-}
-
-#menu8{
-    display: none;
-}
-
-#menu9{
-    display: none;
-}
-
-#menu10{
-    display: none;
-}
-
-/*Animation des menus au survol*/
-.menu:hover .info{
-    width: 575px;
-}
-
-.menu:hover .check{
-    width: 59px;
-
-}
-
-.menu:hover .check img{
-    display: inline;
-}
-
-/*bouton commander*/
-.button-commander {
-    margin-top: 12px;
-}
-
-.btn-commander {
-    padding: 15px;
-    background: linear-gradient(rgba(255, 121, 218, 1), rgba(147, 86, 220, 1));
-    border: none;
-    border-radius: 25px;
-    color: white;
-    width: 186px;
-    height: 50px;
-    margin-top: 15px;
-    font-size: 16px;
-    font-family: 'Roboto';
-    font-weight: 500;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
-}
-
-.btn-commander:hover{
-background:linear-gradient(rgba(255, 121, 218, 0.8), rgba(147, 86, 220, 0.8));
-box-shadow:0 4px 15px 0 rgba(0, 0, 0, 0.40);
-color: white;
-}
-
-/*Footer*/
-.footer {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    position: absolute;
-    background-color: rgba(53, 53, 53, 1);
-    color: rgba(255, 255, 255, 1);
-    width: 100%;
-    top: 102.01em;
-    left: 0;
-    height: 80px;
-    padding-top: 42px;
-    
-}
-
-.footer-logo {
-    margin-left: 90px;
-    padding-bottom: 5px;
-    margin-right: 70px;
-}
-
-.logo2 {
-    font-family: "Shrikhand";
-    font-weight: 400;
-    font-style: italic;
-    color: rgba(255, 255, 255, 1);
-    font-size: 18px;
-}
-
-.link-footer{
-    padding: 0;
-    display: flex;
-}
-
-.link {
-    /*padding-top: 7px;*/
-    padding: 0 15px;
-
-}
-
-.footer-link {
-    color: rgba(255, 255, 255, 1);
-    text-decoration: none;
-    font-family: 'Roboto';
-}
+    }
 
 
+    .like {
+        display: none;
 
-/*Page La note enchantée*/
-/*bloc conteneur*/
-.block-contener {
-    background-color: rgba(246, 246, 246, 1);
-    position: absolute;
-    top: 422px;
-    width: 100%;
-    max-width: 1055px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 55px;
-    margin: auto;
-       
-}
+    }
 
-.foter {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    position: absolute;
-    background-color: rgba(53, 53, 53, 1);
-    color: rgba(255, 255, 255, 1);
-    width: 100%;
-    top: 106.7em;
-    left: 0;
-    height: 80px;
-    padding-top: 35px;
-    
-}
 
-.link-foter{
-    padding: 0;
-    display: flex;
-}
+    .test1:hover {
+        cursor: pointer;
+    }
 
-/*modification de l'espace pour le coeur*/
-#resto-2:checked+.test1 .likee {
-    display: inline;
-    position: absolute;
-   /* width: 20px;*/
-    top: 33px;
-    left: 46.3em;
-}
+    /*titre des menus*/
+    .title-menu {
+        font-weight: normal;
+        font-family: Roboto;
+        border-bottom: 3px solid rgba(153, 226, 208, 1);
+        width: 6.1%;
+        padding-bottom: 5px;
+        font-weight: 200;
+        font-size: 16px;
+    }
 
-.dislikee{
-    display: inline;
-    position: absolute;
-    top: 33px;
-    left: 46.3em;
+    /*tire entrée,plat et dessert*/
+    .entree {
+        width: 634px;
+    }
 
-}
+    .plat {
+        width: 634px;
+    }
 
-.likee{
-    display: none;
-    
+    .dessert {
+        width: 634px;
+    }
+
+    /*block menu*/
+    .menu {
+        display: flex;
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 15px;
+        height: 72px;
+        width: 634px;
+        margin-bottom: 15px;
+        box-shadow: 0 4.01px 15.04px 0 rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    /*tritre du menu*/
+    .title-h3 {
+        padding-left: 15px;
+        margin-bottom: 0px;
+        padding-top: 10px;
+        white-space: nowrap;
+        /*empêche le retour à la ligne*/
+        overflow: hidden;
+        /*cache le texte qui dépasse*/
+        text-overflow: ellipsis;
+        /* pour ajouter les points de suspension*/
+    }
+
+    /*Paragraphe du menu*/
+    .menu-p {
+        padding-left: 15px;
+        margin-top: 4px;
+        color: rgba(0, 0, 0, 0.6);
+        font-family: 'Roboto';
+        font-size: 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /*Div qui contient le titre, le paragraphe et le prix*/
+    .info {
+        display: flex;
+        align-items: center;
+        padding-bottom: 14px;
+        width: 634px;
+        transition: width 0.5s ease;
+        justify-content: space-between;
+    }
+
+    /*Animation verte qui s'affiche au survol*/
+    .check {
+        width: 0;
+        background-color: rgba(153, 226, 208, 1);
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        position: relative;
+        top: 0;
+        right: 0;
+        transition: width 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*cacher l'icone qui se trouve sur la partie verte de l'animation*/
+    .check img {
+        display: none;
+    }
+
+    /*prix des menus*/
+    .price {
+        padding-top: 40px;
+        padding-right: 10px;
+        /*position: relative;*/
+        left: 18em;
+        font-size: 15.4px;
+        font-weight: 500;
+        font-family: 'Roboto';
+        color: rgba(53, 53, 53, 1);
+    }
+
+    /*checkbox*/
+    #menu1 {
+        display: none;
+    }
+
+    #menu2 {
+        display: none;
+    }
+
+    #menu3 {
+        display: none;
+    }
+
+    #menu4 {
+        display: none;
+    }
+
+    #menu5 {
+        display: none;
+    }
+
+    #menu6 {
+        display: none;
+    }
+
+    #menu7 {
+        display: none;
+    }
+
+    #menu8 {
+        display: none;
+    }
+
+    #menu9 {
+        display: none;
+    }
+
+    #menu10 {
+        display: none;
+    }
+
+    /*Animation des menus au survol*/
+    .menu:hover .info {
+        width: 575px;
+    }
+
+    .menu:hover .check {
+        width: 59px;
+
+    }
+
+    .menu:hover .check img {
+        display: inline;
+    }
+
+    /*bouton commander*/
+    .button-commander {
+        margin-top: 12px;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .btn-commander {
+        padding: 15px;
+        background: linear-gradient(rgba(255, 121, 218, 1), rgba(147, 86, 220, 1));
+        border: none;
+        border-radius: 25px;
+        color: white;
+        width: 186px;
+        height: 50px;
+        margin-top: 15px;
+        font-size: 16px;
+        font-family: 'Roboto';
+        font-weight: 500;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+        transition: box-shadow 0.3s ease-in-out;
+
+    }
+
+    .btn-commander:hover {
+        background: linear-gradient(rgba(255, 121, 218, 0.8), rgba(147, 86, 220, 0.8));
+        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.40);
+        /*box-shadow: inset 0 0 0 100px rgba(255,255,255,0.1);*/
+        color: white;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    /*Footer*/
+    .footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        position: absolute;
+        background-color: rgba(53, 53, 53, 1);
+        color: rgba(255, 255, 255, 1);
+        width: 100%;
+        top: 102.01em;
+        left: 0;
+        height: 80px;
+        padding-top: 42px;
+
+    }
+
+    .footer-logo {
+        margin-left: 90px;
+        padding-bottom: 5px;
+        margin-right: 70px;
+    }
+
+    .logo2 {
+        font-family: "Shrikhand";
+        font-weight: 400;
+        font-style: italic;
+        color: rgba(255, 255, 255, 1);
+        font-size: 18px;
+    }
+
+    .link-footer {
+        padding: 0;
+        display: flex;
+    }
+
+    .link {
+        /*padding-top: 7px;*/
+        padding: 0 15px;
+
+    }
+
+    .footer-link {
+        color: rgba(255, 255, 255, 1);
+        text-decoration: none;
+        font-family: 'Roboto';
+    }
+
+
+
+    /*Page La note enchantée*/
+    /*bloc conteneur*/
+    .block-contener {
+        background-color: rgba(246, 246, 246, 1);
+        position: absolute;
+        top: 422px;
+        width: 100%;
+        max-width: 1055px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 55px;
+        margin: auto;
+
+    }
+
+    .foter {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        position: absolute;
+        background-color: rgba(53, 53, 53, 1);
+        color: rgba(255, 255, 255, 1);
+        width: 100%;
+        top: 106.7em;
+        left: 0;
+        height: 80px;
+        padding-top: 35px;
+
+    }
+
+    .link-foter {
+        padding: 0;
+        display: flex;
+    }
+
+    /*modification de l'espace pour le coeur*/
+    #resto-2:checked+.test1 .likee {
+        display: inline;
+        position: absolute;
+        /* width: 20px;*/
+        top: 33px;
+        left: 43.3em;
+    }
+
+    .dislikee {
+        display: inline;
+        position: absolute;
+        top: 33px;
+        left: 43.3em;
+
+    }
+
+    .likee {
+        display: none;
+
     }
 
 }
