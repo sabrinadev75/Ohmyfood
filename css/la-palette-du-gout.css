@@ -176,7 +176,7 @@ li {
     }
 
     /*checkbox*/
-    #menu1 {
+    input {
         display: none;
     }
 
@@ -222,11 +222,11 @@ li {
     }
 
     /*Au clic sur le menu on sélectionne l'élément qui suit immédiatement le checkbox et on lui donne une nouvelle largeur*/
-    #menu1:checked+.menu .info {
+    input:checked+.menu .info {
         width: 290px;
     }
 
-    #menu2:checked+.menu .info {
+   /* #menu2:checked+.menu .info {
         width: 290px;
     }
 
@@ -260,14 +260,14 @@ li {
 
     #menu10:checked+.menu .info {
         width: 290px;
-    }
+    }*/
 
     /*Si le checkbox est cocher on séléctionne l'élément qui a la class check se trouvant dans l'élément qui a la class menu et on lui donne une nouvelle largeur */
-    #menu1:checked+.menu .check {
+    input:checked+.menu .check {
         width: 59px;
     }
 
-    #menu2:checked+.menu .check {
+    /*#menu2:checked+.menu .check {
         width: 59px;
 
     }
@@ -303,7 +303,7 @@ li {
 
     #menu10:checked+.menu .check {
         width: 59px;
-    }
+    }*/
 
     /*Pour pouvoir tronquer le texte du menu au clic pour cacher le texte*/
     #menu1:checked+.menu .menu-p {
