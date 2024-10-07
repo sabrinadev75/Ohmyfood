@@ -4,10 +4,6 @@ body {
     padding: 0;
 }
 
-li {
-    list-style: none;
-}
-
 /*fléche du logo(header)*/
 .fa-arrow-left {
     position: absolute;
@@ -17,6 +13,12 @@ li {
     font-size: 20px;
     color: black;
 }
+
+li {
+    list-style: none;
+}
+
+
 
 
 
@@ -64,6 +66,20 @@ li {
         padding-bottom: 35px;
     }
 
+    /*Page La note enchantée*/
+    .block-contener {
+        background-color: rgba(246, 246, 246, 1);
+        position: absolute;
+        top: 300px;
+        width: 100%;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 38px;
+    }
+
     .title-conteneur {
         display: flex;
         align-items: center;
@@ -71,22 +87,6 @@ li {
         width: 76%;
     }
 
-    /* Gestion du coeur pour le titre palette du goût */
-    #resto-2 {
-        display: none;
-    }
-
-    #resto-2:checked+.test1 .dislike {
-        display: none;
-    }
-
-    #resto-2:checked+.test1 .like {
-        display: inline;
-        position: absolute;
-        /* width: 20px;*/
-        top: 31px;
-        right: 41px;
-    }
 
     /*H2 style nom du restaurant*/
     .name-restaurant {
@@ -99,8 +99,12 @@ li {
         margin-right: -27px;
     }
 
-    /*Icone coeur*/
-    .dislike {
+    .block-like:hover {
+        cursor: pointer;
+    }
+
+      /*Icone coeur*/
+      .dislike {
         display: inline;
         position: absolute;
         top: 31px;
@@ -108,38 +112,93 @@ li {
 
     }
 
+       /*Page La note enchantée*/
+       .dislikee {
+        display: inline;
+        position: absolute;
+        top: 31px;
+        right: 28px;
+    }
 
     .like {
         display: none;
 
     }
 
-
-    .test1:hover {
-        cursor: pointer;
+      /*Page La note enchantée*/
+      .likee {
+        display: none;
     }
 
 
-    /*menu*/
-    .menu {
-        display: flex;
-        background-color: rgba(255, 255, 255, 1);
-        border-radius: 15px;
-        height: 69px;
-        width: 349px;
-        margin-bottom: 15px;
-        box-shadow: 0 4.01px 15.04px 0 rgba(0, 0, 0, 0.1);
+    /* Gestion du coeur pour le titre palette du goût */
+    input {
+        display: none;
     }
 
-    .title-menu {
-        font-weight: normal;
-        font-family: Roboto;
-        border-bottom: 3px solid rgba(153, 226, 208, 1);
-        width: 11%;
-        padding-bottom: 5px;
-        font-weight: 200;
-        font-size: 16px;
+    input:checked+.block-like .dislike {
+        display: none;
     }
+
+        /*Page La note enchantée*/
+    /*modification de l'espace pour le coeur*/
+    input:checked+.block-like .likee {
+        display: inline;
+        position: absolute;
+        top: 31px;
+        right: 28px;
+    }
+
+
+    input:checked+.block-like .like {
+        display: inline;
+        position: absolute;
+        top: 31px;
+        right: 41px;
+    }
+
+    
+/*Titre ENTRÉE*/
+.entree {
+    width: 348px;
+}
+
+ /*Titre  menu*/
+ .title-menu {
+    font-weight: normal;
+    font-family: Roboto;
+    border-bottom: 3px solid rgba(153, 226, 208, 1);
+    width: 6.1%;
+    padding-bottom: 5px;
+    font-weight: 200;
+    font-size: 16px;
+}
+
+/*menu*/
+.menu {
+    display: flex;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 15px;
+    height: 69px;
+    width: 349px;
+    margin-bottom: 15px;
+    box-shadow: 0 4.01px 15.04px 0 rgba(0, 0, 0, 0.1);
+}
+
+/*Au survol des menus pour changer l 'apparence de la souris*/
+.menu:hover {
+    cursor: pointer;
+}
+    
+
+.info {
+    display: flex;
+    align-items: center;
+    padding-bottom: 14px;
+    width: 349px;
+    transition: width 0.5s ease;
+    justify-content: space-between;
+}
 
     /*tritre du menu*/
     .title-h3 {
@@ -154,7 +213,6 @@ li {
         /* pour ajouter les points de suspension*/
     }
 
-    
     .menu-p {
         padding-left: 15px;
         margin-top: 4px;
@@ -166,215 +224,13 @@ li {
         text-overflow: ellipsis;
     }
 
-    .info {
-        display: flex;
-        align-items: center;
-        padding-bottom: 14px;
-        width: 349px;
-        transition: width 0.5s ease;
-        justify-content: space-between;
+
+    /*Prix des entrées*/
+    .price {
+        padding-top: 40px;
+        padding-right: 10px;
     }
 
-    /*checkbox*/
-    input {
-        display: none;
-    }
-
-    #menu2 {
-        display: none;
-    }
-
-    #menu3 {
-        display: none;
-    }
-
-    #menu4 {
-        display: none;
-    }
-
-    #menu5 {
-        display: none;
-    }
-
-    #menu6 {
-        display: none;
-    }
-
-    #menu7 {
-        display: none;
-    }
-
-    #menu8 {
-        display: none;
-    }
-
-    #menu9 {
-        display: none;
-    }
-
-    #menu10 {
-        display: none;
-    }
-
-    /*Au survol des menus pour changer l 'apparence de la souris*/
-    .menu:hover {
-        cursor: pointer;
-    }
-
-    /*Au clic sur le menu on sélectionne l'élément qui suit immédiatement le checkbox et on lui donne une nouvelle largeur*/
-    input:checked+.menu .info {
-        width: 290px;
-    }
-
-   /* #menu2:checked+.menu .info {
-        width: 290px;
-    }
-
-    #menu3:checked+.menu .info {
-        width: 290px;
-    }
-
-    #menu4:checked+.menu .info {
-        width: 290px;
-    }
-
-    #menu5:checked+.menu .info {
-        width: 290px;
-    }
-
-    #menu6:checked+.menu .info {
-        width: 290px;
-    }
-
-    #menu7:checked+.menu .info {
-        width: 290px;
-    }
-
-    #menu8:checked+.menu .info {
-        width: 290px;
-    }
-
-    #menu9:checked+.menu .info {
-        width: 290px;
-    }
-
-    #menu10:checked+.menu .info {
-        width: 290px;
-    }*/
-
-    /*Si le checkbox est cocher on séléctionne l'élément qui a la class check se trouvant dans l'élément qui a la class menu et on lui donne une nouvelle largeur */
-    input:checked+.menu .check {
-        width: 59px;
-    }
-
-    /*#menu2:checked+.menu .check {
-        width: 59px;
-
-    }
-
-    #menu3:checked+.menu .check {
-        width: 59px;
-
-    }
-
-    #menu4:checked+.menu .check {
-        width: 59px;
-    }
-
-    #menu5:checked+.menu .check {
-        width: 59px;
-    }
-
-    #menu6:checked+.menu .check {
-        width: 59px;
-    }
-
-    #menu7:checked+.menu .check {
-        width: 59px;
-    }
-
-    #menu8:checked+.menu .check {
-        width: 59px;
-    }
-
-    #menu9:checked+.menu .check {
-        width: 59px;
-    }
-
-    #menu10:checked+.menu .check {
-        width: 59px;
-    }*/
-
-    /*Pour pouvoir tronquer le texte du menu au clic pour cacher le texte*/
-    #menu1:checked+.menu .menu-p {
-        width: 220px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    #menu2:checked+.menu .menu-p {
-        width: 220px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    #menu3:checked+.menu .menu-p {
-        width: 220px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    #menu4:checked+.menu .menu-p {
-        width: 220px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    #menu5:checked+.menu .menu-p {
-        width: 220px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    #menu6:checked+.menu .menu-p {
-        width: 220px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    #menu7:checked+.menu .menu-p {
-        width: 220px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    #menu8:checked+.menu .menu-p {
-        width: 220px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    #menu9:checked+.menu .menu-p {
-        width: 220px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    #menu10:checked+.menu .menu-p {
-        width: 220px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
 
     .check {
         width: 0;
@@ -390,94 +246,57 @@ li {
         align-items: center;
     }
 
-    #menu5:checked+.menu .title-h3 {
-        width: 220px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    #menu3:checked+.menu .title-h3 {
-        width: 220px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    #menu4:checked+.menu .title-h3 {
-        width: 220px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
     .check img {
         display: none;
     }
 
+    /*checkbox*/
+    input {
+        display: none;
+    }
 
 
-    #menu1:checked+.menu .check img {
+    /*Au clic sur le menu on sélectionne l'élément qui suit immédiatement le checkbox et on lui donne une nouvelle largeur*/
+    input:checked+.menu .info {
+        width: 290px;
+    }
+
+
+    /*Si le checkbox est cocher on séléctionne l'élément qui a la class check se trouvant dans l'élément qui a la class menu et on lui donne une nouvelle largeur */
+    input:checked+.menu .check {
+        width: 59px;
+    }
+
+
+    /*Pour pouvoir tronquer le texte du menu au clic pour cacher le texte*/
+    input:checked+.menu .menu-p {
+        width: 220px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    input:checked+.menu .title-h3 {
+        width: 220px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    
+    input:checked+.menu .check img {
         display: inline;
 
     }
 
-    #menu2:checked+.menu .check img {
-        display: inline;
-
-    }
-
-    #menu3:checked+.menu .check img {
-        display: inline;
-
-    }
-
-    #menu4:checked+.menu .check img {
-        display: inline;
-
-    }
-
-    #menu5:checked+.menu .check img {
-        display: inline;
-
-    }
-
-    #menu6:checked+.menu .check img {
-        display: inline;
-
-    }
-
-    #menu7:checked+.menu .check img {
-        display: inline;
-
-    }
-
-    #menu8:checked+.menu .check img {
-        display: inline;
-
-    }
-
-    #menu9:checked+.menu .check img {
-        display: inline;
-
-    }
-
-    #menu10:checked+.menu .check img {
-        display: inline;
-
-    }
 
     /*ajout de l'espace au dessus du titre dessert */
     .dessert {
         margin-top: 6px;
     }
 
-    /*Prix des entrées*/
-
-    .price {
-        padding-top: 40px;
-        padding-right: 10px;
-    }
+    
 
 
 
@@ -513,20 +332,22 @@ li {
         width: 100%;
     }
 
+     /*Page La note enchantée*/
+     .foter {
+        display: inline;
+        position: absolute;
+        top: 97.7em;
+        background-color: rgba(53, 53, 53, 1);
+        color: rgba(255, 255, 255, 1);
+        width: 100%;
+     }
+
     .logo2 {
         margin-left: 22px;
         font-family: 'Shrikhand';
         font-style: italic;
         font-weight: unset;
         font-size: 18px;
-
-
-    }
-
-    .footer-link {
-        text-decoration: none;
-        color: white;
-        line-height: 26px;
 
 
     }
@@ -541,68 +362,6 @@ li {
     }
 
     /*Page La note enchantée*/
-    .block-contener {
-        background-color: rgba(246, 246, 246, 1);
-        position: absolute;
-        top: 300px;
-        width: 100%;
-        border-top-left-radius: 30px;
-        border-top-right-radius: 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 38px;
-    }
-
-    .title-h3 {
-        padding-left: 15px;
-        margin-bottom: 0px;
-        padding-top: 10px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis
-    }
-
-    #menu2:checked+.menu .title-h3 {
-        width: 220px;
-        /*white-space: nowrap;*/
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    #menu3:checked+.menu .title-h3 {
-        width: 220px;
-        /*white-space: nowrap;*/
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-
-
-    #menu4:checked+.menu .title-h3 {
-        width: 220px;
-        /*white-space: nowrap;*/
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-
-    #menu8:checked+.menu .title-h3 {
-        width: 220px;
-        /*white-space: nowrap;*/
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .foter {
-        display: inline;
-        position: absolute;
-        top: 97.7em;
-        background-color: rgba(53, 53, 53, 1);
-        color: rgba(255, 255, 255, 1);
-        width: 100%;
-    }
-
     .link-foter {
         list-style: none;
         padding: 0;
@@ -613,26 +372,10 @@ li {
         padding-bottom: 0.5px;
     }
 
-    /*modification de l'espace pour le coeur*/
-    #resto-2:checked+.test1 .likee {
-        display: inline;
-        position: absolute;
-        /* width: 20px;*/
-        top: 31px;
-        right: 28px;
-    }
-
-    .dislikee {
-        display: inline;
-        position: absolute;
-        top: 31px;
-        right: 28px;
-
-    }
-
-    .likee {
-        display: none;
-
+    .footer-link {
+        text-decoration: none;
+        color: white;
+        line-height: 26px;
     }
 
 }
@@ -654,7 +397,6 @@ li {
         display: flex;
         justify-content: center;
         padding: 20px 0;
-        /* box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15); */
         position: fixed;
         width: 100%;
         background-color: rgba(255, 255, 255, 1);
@@ -696,6 +438,23 @@ li {
         margin: auto;
     }
 
+     /*Page La note enchantée*/
+    /*bloc conteneur*/
+    .block-contener {
+        background-color: rgba(246, 246, 246, 1);
+        position: absolute;
+        top: 422px;
+        width: 100%;
+        max-width: 1055px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 55px;
+        margin: auto;
+    }
+
     /* nom du restaurant + coeur*/
     .title-conteneur {
         display: flex;
@@ -704,24 +463,8 @@ li {
 
     }
 
-    /* Gestion du coeur pour le titre palette du goût */
-    #resto-2 {
-        display: none;
-    }
-
-    #resto-2:checked+.test1 .dislike {
-        display: none;
-    }
-
-    #resto-2:checked+.test1 .like {
-        display: inline;
-        position: absolute;
-        top: 33px;
-        left: 42.8em;
-    }
-
-    /*H2 style nom du restaurant*/
-    .name-restaurant {
+     /*H2 style nom du restaurant*/
+     .name-restaurant {
         font-family: "Shrikhand";
         font-style: italic;
         font-weight: 900;
@@ -729,6 +472,36 @@ li {
         color: rgba(16, 16, 16, 1);
         margin-left: -25px;
         margin-right: -27px;
+    }
+
+    /* Gestion du coeur pour le titre palette du goût */
+    input {
+        display: none;
+    }
+    
+    .block-like:hover {
+        cursor: pointer;
+    }
+
+    input:checked+.block-like .dislike {
+        display: none;
+    }
+
+       /******Page NOTE ENCHANTÉE***/
+    /*modification de l'espace pour le coeur*/
+    input:checked+.block-like .likee {
+        display: inline;
+        position: absolute;
+        /* width: 20px;*/
+        top: 33px;
+        left: 43.3em;
+    }
+
+    input:checked+.block-like .like {
+        display: inline;
+        position: absolute;
+        top: 33px;
+        left: 42.8em;
     }
 
     /*Icone coeur*/
@@ -741,32 +514,27 @@ li {
     }
 
 
+    /******Page NOTE ENCHANTÉE***/
+    .dislikee {
+        display: inline;
+        position: absolute;
+        top: 33px;
+        left: 43.3em;
+
+    }
+
     .like {
         display: none;
 
     }
 
+    /******Page NOTE ENCHANTÉE***/
+    .likee {
+        display: none;
 
-    .test1:hover {
-        cursor: pointer;
-    }
-
-    /*titre des menus*/
-    .title-menu {
-        font-weight: normal;
-        font-family: Roboto;
-        border-bottom: 3px solid rgba(153, 226, 208, 1);
-        width: 6.1%;
-        padding-bottom: 5px;
-        font-weight: 200;
-        font-size: 16px;
     }
 
     /*tire entrée,plat et dessert*/
-    .entree {
-        width: 634px;
-    }
-
     .plat {
         width: 634px;
     }
@@ -785,6 +553,22 @@ li {
         margin-bottom: 15px;
         box-shadow: 0 4.01px 15.04px 0 rgba(0, 0, 0, 0.1);
         overflow: hidden;
+    }
+
+
+    /*Div qui contient le titre, le paragraphe et le prix*/
+    .info {
+        display: flex;
+        align-items: center;
+        padding-bottom: 14px;
+        width: 634px;
+        transition: width 0.5s ease;
+        justify-content: space-between;
+    }
+
+    /*Animation des menus au survol*/
+    .menu:hover .info {
+        width: 575px;
     }
 
     /*tritre du menu*/
@@ -812,15 +596,17 @@ li {
         text-overflow: ellipsis;
     }
 
-    /*Div qui contient le titre, le paragraphe et le prix*/
-    .info {
-        display: flex;
-        align-items: center;
-        padding-bottom: 14px;
-        width: 634px;
-        transition: width 0.5s ease;
-        justify-content: space-between;
+     /*prix des menus*/
+     .price {
+        padding-top: 40px;
+        padding-right: 10px;
+        left: 18em;
+        font-size: 15.4px;
+        font-weight: 500;
+        font-family: 'Roboto';
+        color: rgba(53, 53, 53, 1);
     }
+
 
     /*Animation verte qui s'affiche au survol*/
     .check {
@@ -840,64 +626,6 @@ li {
     /*cacher l'icone qui se trouve sur la partie verte de l'animation*/
     .check img {
         display: none;
-    }
-
-    /*prix des menus*/
-    .price {
-        padding-top: 40px;
-        padding-right: 10px;
-        /*position: relative;*/
-        left: 18em;
-        font-size: 15.4px;
-        font-weight: 500;
-        font-family: 'Roboto';
-        color: rgba(53, 53, 53, 1);
-    }
-
-    /*checkbox*/
-    #menu1 {
-        display: none;
-    }
-
-    #menu2 {
-        display: none;
-    }
-
-    #menu3 {
-        display: none;
-    }
-
-    #menu4 {
-        display: none;
-    }
-
-    #menu5 {
-        display: none;
-    }
-
-    #menu6 {
-        display: none;
-    }
-
-    #menu7 {
-        display: none;
-    }
-
-    #menu8 {
-        display: none;
-    }
-
-    #menu9 {
-        display: none;
-    }
-
-    #menu10 {
-        display: none;
-    }
-
-    /*Animation des menus au survol*/
-    .menu:hover .info {
-        width: 575px;
     }
 
     .menu:hover .check {
@@ -956,6 +684,22 @@ li {
 
     }
 
+     /******Page NOTE ENCHANTÉE***/
+     .foter {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        position: absolute;
+        background-color: rgba(53, 53, 53, 1);
+        color: rgba(255, 255, 255, 1);
+        width: 100%;
+        top: 106.7em;
+        left: 0;
+        height: 80px;
+        padding-top: 35px;
+
+    }
+
     .footer-logo {
         margin-left: 90px;
         padding-bottom: 5px;
@@ -975,6 +719,12 @@ li {
         display: flex;
     }
 
+     /******Page NOTE ENCHANTÉE***/
+     .link-foter {
+        padding: 0;
+        display: flex;
+    }
+    
     .link {
         /*padding-top: 7px;*/
         padding: 0 15px;
@@ -985,68 +735,6 @@ li {
         color: rgba(255, 255, 255, 1);
         text-decoration: none;
         font-family: 'Roboto';
-    }
-
-
-
-    /*Page La note enchantée*/
-    /*bloc conteneur*/
-    .block-contener {
-        background-color: rgba(246, 246, 246, 1);
-        position: absolute;
-        top: 422px;
-        width: 100%;
-        max-width: 1055px;
-        border-top-left-radius: 30px;
-        border-top-right-radius: 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 55px;
-        margin: auto;
-
-    }
-
-    .foter {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        position: absolute;
-        background-color: rgba(53, 53, 53, 1);
-        color: rgba(255, 255, 255, 1);
-        width: 100%;
-        top: 106.7em;
-        left: 0;
-        height: 80px;
-        padding-top: 35px;
-
-    }
-
-    .link-foter {
-        padding: 0;
-        display: flex;
-    }
-
-    /*modification de l'espace pour le coeur*/
-    #resto-2:checked+.test1 .likee {
-        display: inline;
-        position: absolute;
-        /* width: 20px;*/
-        top: 33px;
-        left: 43.3em;
-    }
-
-    .dislikee {
-        display: inline;
-        position: absolute;
-        top: 33px;
-        left: 43.3em;
-
-    }
-
-    .likee {
-        display: none;
-
     }
 
 }
